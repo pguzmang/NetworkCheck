@@ -1,7 +1,0 @@
-Jitter Results - EXTERNAL
-Timestamp: 2025-06-16 08:33:04
---------------------------------------------------
-Host: google.com
-Jitter: 2.97 ms
-Success: True
-

@@ -66,8 +66,7 @@ try
         Console.WriteLine("\n" + new string('-', 80));
         Console.WriteLine("Waiting 3 minutes before next scan...");
         
-        // Wait 3 minutes before next iteration
-        Thread.Sleep(180000); // 3 minutes = 180 seconds = 180000 milliseconds
+        Thread.Sleep(30000); // 3 minutes = 180 seconds = 180000 milliseconds
     }
 }
 catch (Exception ex)

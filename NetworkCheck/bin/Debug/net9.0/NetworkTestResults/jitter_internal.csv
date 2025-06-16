@@ -1,0 +1,12 @@
+Timestamp,Host,Jitter(ms),Success
+2025-06-16 16:44:56,git.rockfin.com,189.40,True
+2025-06-16 16:48:42,git.rockfin.com,9.26,True
+2025-06-16 16:52:27,git.rockfin.com,20.72,True
+2025-06-16 17:15:44,git.rockfin.com,139.72,True
+2025-06-16 17:17:02,git.rockfin.com,28.44,True
+2025-06-16 17:18:56,git.rockfin.com,240.96,True
+2025-06-16 17:20:12,git.rockfin.com,153.80,True
+2025-06-16 17:21:28,git.rockfin.com,92.96,True
+2025-06-16 17:23:21,git.rockfin.com,24.44,True
+2025-06-16 17:24:37,git.rockfin.com,4.28,True
+2025-06-16 17:30:07,git.rockfin.com,27.51,True

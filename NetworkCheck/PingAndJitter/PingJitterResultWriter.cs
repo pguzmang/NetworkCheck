@@ -3,144 +3,171 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.Json;
 
 namespace NetworkScanner
 {
     public class PingJitterResultWriter
     {
         private readonly string _outputDirectory;
-        private readonly JsonSerializerOptions _jsonOptions;
+        private const long MaxFileSizeBytes = 5 * 1024 * 1024; // 5 MB
         
         public PingJitterResultWriter(string outputDirectory = "NetworkTestResults")
         {
             _outputDirectory = outputDirectory;
             Directory.CreateDirectory(_outputDirectory);
-            
-            _jsonOptions = new JsonSerializerOptions
-            {
-                WriteIndented = true
-            };
         }
         
         public void WriteResults(List<PingResult> results)
         {
-            var timestamp = DateTime.Now;
-            var timestampStr = timestamp.ToString("yyyyMMdd_HHmmss");
-            
             // Categorize results
             var external = results.Where(r => IsExternal(r.Host)).ToList();
             var internalAes = results.Where(r => IsInternalAes(r.Host)).ToList();
             var internalOther = results.Where(r => IsInternal(r.Host) && !IsInternalAes(r.Host)).ToList();
             
-            // Write ping results
-            WritePingResultsJson("external", external, timestamp, timestampStr);
-            WritePingResultsJson("internalaes", internalAes, timestamp, timestampStr);
-            WritePingResultsJson("internal", internalOther, timestamp, timestampStr);
+            // Write CSV files
+            WritePingResultsCsv("external", external);
+            WritePingResultsCsv("internalaes", internalAes);
+            WritePingResultsCsv("internal", internalOther);
             
-            // Write jitter results
-            WriteJitterResultsJson("external", external, timestamp, timestampStr);
-            WriteJitterResultsJson("internalaes", internalAes, timestamp, timestampStr);
-            WriteJitterResultsJson("internal", internalOther, timestamp, timestampStr);
-            
-            // Also write CSV format for easier import into Excel/other tools
-            WritePingResultsCsv("external", external, timestampStr);
-            WritePingResultsCsv("internalaes", internalAes, timestampStr);
-            WritePingResultsCsv("internal", internalOther, timestampStr);
-            
-            WriteJitterResultsCsv("external", external, timestampStr);
-            WriteJitterResultsCsv("internalaes", internalAes, timestampStr);
-            WriteJitterResultsCsv("internal", internalOther, timestampStr);
+            WriteJitterResultsCsv("external", external);
+            WriteJitterResultsCsv("internalaes", internalAes);
+            WriteJitterResultsCsv("internal", internalOther);
         }
         
-        private void WritePingResultsJson(string category, List<PingResult> results, DateTime testTime, string timestampStr)
+        private void WritePingResultsCsv(string category, List<PingResult> results)
         {
             if (results.Count == 0) return;
             
-            var filename = Path.Combine(_outputDirectory, $"ping_{category}_{timestampStr}.json");
+            var filename = Path.Combine(_outputDirectory, $"ping_{category}.csv");
             
-            var fileData = new PingJitterFileData
+            // Check if file needs rotation
+            if (File.Exists(filename) && new FileInfo(filename).Length > MaxFileSizeBytes)
             {
-                Category = category,
-                TestType = "ping",
-                TestTimestamp = testTime,
-                Results = results.Select(r => new TestResult
-                {
-                    Host = r.Host,
-                    Value = r.MedianPing,
-                    Success = r.Success,
-                    Timestamp = r.Timestamp
-                }).ToList()
-            };
-            
-            var json = JsonSerializer.Serialize(fileData, _jsonOptions);
-            File.WriteAllText(filename, json);
-            FileLogger.Info($"Ping results for {category} written to: {filename}");
-        }
-        
-        private void WriteJitterResultsJson(string category, List<PingResult> results, DateTime testTime, string timestampStr)
-        {
-            if (results.Count == 0) return;
-            
-            var filename = Path.Combine(_outputDirectory, $"jitter_{category}_{timestampStr}.json");
-            
-            var fileData = new PingJitterFileData
-            {
-                Category = category,
-                TestType = "jitter",
-                TestTimestamp = testTime,
-                Results = results.Select(r => new TestResult
-                {
-                    Host = r.Host,
-                    Value = r.Jitter,
-                    Success = r.Success,
-                    Timestamp = r.Timestamp
-                }).ToList()
-            };
-            
-            var json = JsonSerializer.Serialize(fileData, _jsonOptions);
-            File.WriteAllText(filename, json);
-            FileLogger.Info($"Jitter results for {category} written to: {filename}");
-        }
-        
-        private void WritePingResultsCsv(string category, List<PingResult> results, string timestampStr)
-        {
-            if (results.Count == 0) return;
-            
-            var filename = Path.Combine(_outputDirectory, $"ping_{category}_{timestampStr}.csv");
-            var csv = new StringBuilder();
-            
-            // Header
-            csv.AppendLine("Timestamp,Host,MedianPing(ms),Success");
-            
-            // Data
-            foreach (var result in results)
-            {
-                csv.AppendLine($"{result.Timestamp:yyyy-MM-dd HH:mm:ss},{result.Host},{(result.Success ? result.MedianPing.ToString("F2") : "FAIL")},{result.Success}");
+                RotateFile(filename);
             }
             
-            File.WriteAllText(filename, csv.ToString());
-            FileLogger.Info($"Ping CSV for {category} written to: {filename}");
+            var fileExists = File.Exists(filename);
+            
+            // Calculate current median from existing data before writing new values
+            double? currentMedian = null;
+            if (fileExists)
+            {
+                currentMedian = CalculateMedianFromCsv(filename, "MedianPing(ms)");
+            }
+            
+            using (var writer = new StreamWriter(filename, append: true))
+            {
+                // Write header only if file doesn't exist
+                if (!fileExists)
+                {
+                    writer.WriteLine("Timestamp,Host,MedianPing(ms),Success");
+                }
+                
+                // Write data and compare last value to median
+                for (int i = 0; i < results.Count; i++)
+                {
+                    var result = results[i];
+                    writer.WriteLine($"{result.Timestamp:yyyy-MM-dd HH:mm:ss},{result.Host},{(result.Success ? result.MedianPing.ToString("F2") : "FAIL")},{result.Success}");
+                    
+                    // Compare last value to current median
+                    if (i == results.Count - 1 && result.Success && currentMedian.HasValue)
+                    {
+                        var comparison = result.MedianPing > currentMedian.Value ? "above" : 
+                                       result.MedianPing < currentMedian.Value ? "below" : "equal to";
+                        Console.WriteLine($"Last ping value for {category} ({result.MedianPing:F2} ms) is {comparison} current median ({currentMedian.Value:F2} ms)");
+                    }
+                }
+            }
+            
+            FileLogger.Info($"Ping results for {category} appended to: {filename}");
+            
+            // Calculate and display median after file is closed
+            var median = CalculateMedianFromCsv(filename, "MedianPing(ms)");
+            if (median.HasValue)
+            {
+                Console.WriteLine($"Current median ping for {category}: {median.Value:F2} ms");
+            }
         }
         
-        private void WriteJitterResultsCsv(string category, List<PingResult> results, string timestampStr)
+        private void WriteJitterResultsCsv(string category, List<PingResult> results)
         {
             if (results.Count == 0) return;
             
-            var filename = Path.Combine(_outputDirectory, $"jitter_{category}_{timestampStr}.csv");
-            var csv = new StringBuilder();
+            var filename = Path.Combine(_outputDirectory, $"jitter_{category}.csv");
             
-            // Header
-            csv.AppendLine("Timestamp,Host,Jitter(ms),Success");
-            
-            // Data
-            foreach (var result in results)
+            // Check if file needs rotation
+            if (File.Exists(filename) && new FileInfo(filename).Length > MaxFileSizeBytes)
             {
-                csv.AppendLine($"{result.Timestamp:yyyy-MM-dd HH:mm:ss},{result.Host},{(result.Success ? result.Jitter.ToString("F2") : "FAIL")},{result.Success}");
+                RotateFile(filename);
             }
             
-            File.WriteAllText(filename, csv.ToString());
-            FileLogger.Info($"Jitter CSV for {category} written to: {filename}");
+            var fileExists = File.Exists(filename);
+            
+            // Calculate current median from existing data before writing new values
+            double? currentMedian = null;
+            if (fileExists)
+            {
+                currentMedian = CalculateMedianFromCsv(filename, "Jitter(ms)");
+            }
+            
+            using (var writer = new StreamWriter(filename, append: true))
+            {
+                // Write header only if file doesn't exist
+                if (!fileExists)
+                {
+                    writer.WriteLine("Timestamp,Host,Jitter(ms),Success");
+                }
+                
+                // Write data and compare last value to median
+                for (int i = 0; i < results.Count; i++)
+                {
+                    var result = results[i];
+                    writer.WriteLine($"{result.Timestamp:yyyy-MM-dd HH:mm:ss},{result.Host},{(result.Success ? result.Jitter.ToString("F2") : "FAIL")},{result.Success}");
+                    
+                    // Compare last value to current median
+                    if (i == results.Count - 1 && result.Success && currentMedian.HasValue)
+                    {
+                        var comparison = result.Jitter > currentMedian.Value ? "above" : 
+                                       result.Jitter < currentMedian.Value ? "below" : "equal to";
+                        Console.WriteLine($"Last jitter value for {category} ({result.Jitter:F2} ms) is {comparison} current median ({currentMedian.Value:F2} ms)");
+                    }
+                }
+            }
+            
+            FileLogger.Info($"Jitter results for {category} appended to: {filename}");
+            
+            // Calculate and display median after file is closed
+            var median = CalculateMedianFromCsv(filename, "Jitter(ms)");
+            if (median.HasValue)
+            {
+                Console.WriteLine($"Current median jitter for {category}: {median.Value:F2} ms");
+            }
+        }
+        
+        private void RotateFile(string filename)
+        {
+            var directory = Path.GetDirectoryName(filename);
+            var nameWithoutExtension = Path.GetFileNameWithoutExtension(filename);
+            var extension = Path.GetExtension(filename);
+            
+            var firstFile = filename; // e.g., ping_external.csv
+            var secondFile = Path.Combine(directory, $"{nameWithoutExtension}_2{extension}"); // e.g., ping_external_2.csv
+            
+            if (File.Exists(secondFile))
+            {
+                // Both files exist and first is full
+                // Delete the second file and move first to second
+                File.Delete(secondFile);
+                File.Move(firstFile, secondFile);
+                FileLogger.Info($"Rotated files: deleted {Path.GetFileName(secondFile)}, moved {Path.GetFileName(firstFile)} to {Path.GetFileName(secondFile)}");
+            }
+            else
+            {
+                // Only first file exists and is full
+                // Move first to second
+                File.Move(firstFile, secondFile);
+                FileLogger.Info($"Created second file: moved {Path.GetFileName(firstFile)} to {Path.GetFileName(secondFile)}");
+            }
         }
         
         private bool IsExternal(string host)
@@ -164,6 +191,64 @@ namespace NetworkScanner
                    host.Contains(".rockfin.") ||
                    host.Contains(".mi.") ||
                    host.Contains("git.rockfin.com");
+        }
+        
+        private double? CalculateMedianFromCsv(string filename, string valueColumnName)
+        {
+            try
+            {
+                if (!File.Exists(filename))
+                    return null;
+                
+                var lines = File.ReadAllLines(filename);
+                if (lines.Length < 2) // Header + at least one data row
+                    return null;
+                
+                // Parse header to find the column index
+                var headers = lines[0].Split(',');
+                var valueColumnIndex = Array.IndexOf(headers, valueColumnName);
+                if (valueColumnIndex == -1)
+                    return null;
+                
+                var values = new List<double>();
+                
+                // Parse data rows
+                for (int i = 1; i < lines.Length; i++)
+                {
+                    var columns = lines[i].Split(',');
+                    if (columns.Length > valueColumnIndex)
+                    {
+                        var valueStr = columns[valueColumnIndex];
+                        if (double.TryParse(valueStr, out double value))
+                        {
+                            values.Add(value);
+                        }
+                    }
+                }
+                
+                if (values.Count == 0)
+                    return null;
+                
+                // Calculate median
+                values.Sort();
+                int count = values.Count;
+                
+                if (count % 2 == 0)
+                {
+                    // Even number of values - average of two middle values
+                    return (values[count / 2 - 1] + values[count / 2]) / 2.0;
+                }
+                else
+                {
+                    // Odd number of values - middle value
+                    return values[count / 2];
+                }
+            }
+            catch (Exception ex)
+            {
+                FileLogger.Error($"Error calculating median from CSV {filename}: {ex.Message}");
+                return null;
+            }
         }
     }
 }

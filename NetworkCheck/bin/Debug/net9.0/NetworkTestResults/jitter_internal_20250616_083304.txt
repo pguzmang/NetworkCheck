@@ -1,7 +1,0 @@
-Jitter Results - INTERNAL
-Timestamp: 2025-06-16 08:33:04
---------------------------------------------------
-Host: git.rockfin.com
-Jitter: 2.58 ms
-Success: True
-

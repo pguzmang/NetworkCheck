@@ -1,0 +1,23 @@
+Timestamp,Host,MedianPing(ms),Success
+2025-06-16 16:44:11,RCD2AES601.mi.corp.rockfin.com,126.50,True
+2025-06-16 16:44:34,RCD1AES601.mi.corp.rockfin.com,405.00,True
+2025-06-16 16:48:19,RCD2AES601.mi.corp.rockfin.com,94.50,True
+2025-06-16 16:48:30,RCD1AES601.mi.corp.rockfin.com,98.50,True
+2025-06-16 16:52:05,RCD2AES601.mi.corp.rockfin.com,114.00,True
+2025-06-16 16:52:16,RCD1AES601.mi.corp.rockfin.com,105.50,True
+2025-06-16 17:15:20,RCD2AES601.mi.corp.rockfin.com,112.50,True
+2025-06-16 17:15:32,RCD1AES601.mi.corp.rockfin.com,122.00,True
+2025-06-16 17:16:39,RCD2AES601.mi.corp.rockfin.com,262.50,True
+2025-06-16 17:16:51,RCD1AES601.mi.corp.rockfin.com,103.50,True
+2025-06-16 17:18:09,RCD2AES601.mi.corp.rockfin.com,425.00,True
+2025-06-16 17:18:37,RCD1AES601.mi.corp.rockfin.com,585.00,True
+2025-06-16 17:19:49,RCD2AES601.mi.corp.rockfin.com,101.00,True
+2025-06-16 17:20:00,RCD1AES601.mi.corp.rockfin.com,106.50,True
+2025-06-16 17:21:05,RCD2AES601.mi.corp.rockfin.com,103.50,True
+2025-06-16 17:21:16,RCD1AES601.mi.corp.rockfin.com,99.50,True
+2025-06-16 17:22:59,RCD2AES601.mi.corp.rockfin.com,107.00,True
+2025-06-16 17:23:10,RCD1AES601.mi.corp.rockfin.com,100.50,True
+2025-06-16 17:24:15,RCD2AES601.mi.corp.rockfin.com,99.00,True
+2025-06-16 17:24:26,RCD1AES601.mi.corp.rockfin.com,89.00,True
+2025-06-16 17:29:44,RCD2AES601.mi.corp.rockfin.com,100.00,True
+2025-06-16 17:29:56,RCD1AES601.mi.corp.rockfin.com,102.50,True
