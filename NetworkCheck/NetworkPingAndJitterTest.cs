@@ -6,45 +6,71 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace NetworkScanner
 {
     public class NetworkPingAndJitterTest
     {
-        // Since we don't have SoftPhoneConfig.aesServerSet, we'll use a static list
-        private static readonly List<string> AesServerSet = new List<string>
+        private static NetworkCheck.NetworkPingSettings _settings = null!;
+        
+        static NetworkPingAndJitterTest()
         {
-            "RCD2AES601.mi.corp.rockfin.com",
-            "RCD1AES601.mi.corp.rockfin.com"
-        };
+            LoadConfiguration();
+        }
+        
+        private static void LoadConfiguration()
+        {
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("Config/appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+                
+            _settings = new NetworkCheck.NetworkPingSettings();
+            configuration.GetSection("NetworkPingAndJitterTest").Bind(_settings);
+        }
 
         public static List<PingResult> RunAllTests()
         {
             var results = new List<PingResult>();
             
-            // External test
-            results.Add(TestPingAndJitter("google.com"));
-            
-            // Internal AES tests
-            foreach (var server in AesServerSet)
+            // External tests
+            foreach (var server in _settings.Servers.External)
             {
                 results.Add(TestPingAndJitter(server));
             }
             
-            // Internal test
-            results.Add(TestPingAndJitter("git.rockfin.com"));
+            // Internal AES tests
+            foreach (var server in _settings.Servers.AesServers)
+            {
+                results.Add(TestPingAndJitter(server));
+            }
+            
+            // Internal tests
+            foreach (var server in _settings.Servers.Internal)
+            {
+                results.Add(TestPingAndJitter(server));
+            }
+            
+            // Write results to separate files
+            var writer = new PingJitterResultWriter();
+            writer.WriteResults(results);
             
             return results;
         }
 
         private static void ExternalTest()
         {
-            TestPingAndJitter("google.com");
+            foreach (var server in _settings.Servers.External)
+            {
+                TestPingAndJitter(server);
+            }
         }
 
         private static void InternalAesTest()
         {
-            foreach (var server in AesServerSet)
+            foreach (var server in _settings.Servers.AesServers)
             {
                 TestPingAndJitter(server);
             }
@@ -52,12 +78,15 @@ namespace NetworkScanner
 
         private static void InternalTest()
         {
-            TestPingAndJitter("git.rockfin.com");
+            foreach (var server in _settings.Servers.Internal)
+            {
+                TestPingAndJitter(server);
+            }
         }
 
         public static PingResult TestPingAndJitter(string host)
         {
-            int pingCount = 10; // Number of pings to send
+            int pingCount = _settings.PingSettings.PingCount; // Number of pings to send
             List<long> pingTimes = new List<long>();
             long pingTime;
             StringBuilder logMessages = new StringBuilder();
@@ -76,7 +105,7 @@ namespace NetworkScanner
                     {
                         logMessages.AppendLine($"Ping {i + 1}: Request timed out to {host}");
                     }
-                    Thread.Sleep(1000); // Wait 1 second between pings
+                    Thread.Sleep(_settings.PingSettings.DelayBetweenPingsMilliseconds); // Wait between pings
                 }
                 catch (Exception e)
                 {
@@ -121,7 +150,7 @@ namespace NetworkScanner
             {
                 using (Ping pingSender = new Ping())
                 {
-                    PingReply reply = pingSender.Send(host, 5000); // 5 second timeout
+                    PingReply reply = pingSender.Send(host, _settings.PingSettings.TimeoutMilliseconds); // Configurable timeout
 
                     if (reply.Status == IPStatus.Success)
                     {

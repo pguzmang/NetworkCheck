@@ -1,0 +1,11 @@
+Ping Results - INTERNALAES
+Timestamp: 2025-06-16 08:33:04
+--------------------------------------------------
+Host: RCD2AES601.mi.corp.rockfin.com
+Median Ping: 26.00 ms
+Success: True
+
+Host: RCD1AES601.mi.corp.rockfin.com
+Median Ping: 23.00 ms
+Success: True
+

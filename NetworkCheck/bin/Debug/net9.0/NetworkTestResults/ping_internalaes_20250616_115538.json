@@ -1,0 +1,19 @@
+{
+  "Category": "internalaes",
+  "TestType": "ping",
+  "TestTimestamp": "2025-06-16T11:55:38.0921511-05:00",
+  "Results": [
+    {
+      "Host": "RCD2AES601.mi.corp.rockfin.com",
+      "Value": 24,
+      "Success": true,
+      "Timestamp": "2025-06-16T11:55:16.6793501-05:00"
+    },
+    {
+      "Host": "RCD1AES601.mi.corp.rockfin.com",
+      "Value": 24.5,
+      "Success": true,
+      "Timestamp": "2025-06-16T11:55:27.5770204-05:00"
+    }
+  ]
+}

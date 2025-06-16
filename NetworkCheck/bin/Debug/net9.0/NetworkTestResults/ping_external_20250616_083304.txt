@@ -1,0 +1,7 @@
+Ping Results - EXTERNAL
+Timestamp: 2025-06-16 08:33:04
+--------------------------------------------------
+Host: google.com
+Median Ping: 31.50 ms
+Success: True
+

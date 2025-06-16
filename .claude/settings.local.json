@@ -4,7 +4,10 @@
       "Bash(mv:*)",
       "Bash(grep:*)",
       "Bash(rm:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(dotnet build)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)"
     ],
     "deny": []
   }

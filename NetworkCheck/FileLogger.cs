@@ -1,122 +1,70 @@
 using System;
 using System.IO;
-using System.Text;
+using System.Reflection;
+using log4net;
+using log4net.Config;
 
 namespace NetworkScanner
 {
     public static class FileLogger
     {
-        private static readonly object _lock = new object();
-        private static string? _logFilePath;
-        private static StreamWriter? _logWriter;
-
+        private static readonly ILog _logger;
+        
         static FileLogger()
         {
-            InitializeLogger();
-        }
-
-        private static void InitializeLogger()
-        {
-            try
-            {
-                // Try to create logs directory in the application directory first
-                string logsDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
-                
-                // If we can't write to the application directory, use temp directory
-                try
-                {
-                    Directory.CreateDirectory(logsDirectory);
-                }
-                catch (UnauthorizedAccessException)
-                {
-                    logsDirectory = Path.Combine(Path.GetTempPath(), "NetworkCheckLogs");
-                    Directory.CreateDirectory(logsDirectory);
-                    Console.WriteLine($"[INFO] Using temp directory for logs: {logsDirectory}");
-                }
-
-                // Create log file with timestamp
-                string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-                string logFileName = $"network_scan_{timestamp}.log";
-                _logFilePath = Path.Combine(logsDirectory, logFileName);
-
-                // Open file for writing (append mode)
-                _logWriter = new StreamWriter(_logFilePath, append: true, encoding: Encoding.UTF8)
-                {
-                    AutoFlush = true // Ensure logs are written immediately
-                };
-
-                // Write initial log entry
-                WriteLog("INFO", $"Logger initialized. Log file: {_logFilePath}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[ERROR] Failed to initialize file logger: {ex.Message}");
-                // Continue without file logging if initialization fails
-                _logWriter = null;
-            }
-        }
-
-        private static void WriteLog(string level, string message)
-        {
-            lock (_lock)
-            {
-                try
-                {
-                    string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
-                    string logEntry = $"[{timestamp}] [{level}] {message}";
-
-                    // Write to console
-                    Console.WriteLine($"[{level}] {message}");
-
-                    // Write to file
-                    _logWriter?.WriteLine(logEntry);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"[ERROR] Failed to write log: {ex.Message}");
-                }
-            }
+            // Configure log4net using the config file
+            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            var configFile = new FileInfo(Path.Combine("Config", "log4net.config"));
+            XmlConfigurator.Configure(logRepository, configFile);
+            
+            _logger = LogManager.GetLogger(typeof(FileLogger));
+            _logger.Info("Logger initialized using log4net");
         }
 
         public static void Debug(string message)
         {
-            WriteLog("DEBUG", message);
+            _logger.Debug(message);
         }
 
         public static void Debug(string message, Exception ex)
         {
-            WriteLog("DEBUG", $"{message}\n{ex}");
+            _logger.Debug(message, ex);
         }
 
         public static void Info(string message)
         {
-            WriteLog("INFO", message);
+            _logger.Info(message);
         }
 
         public static void Warn(string message)
         {
-            WriteLog("WARN", message);
+            _logger.Warn(message);
+        }
+
+        public static void Error(string message)
+        {
+            _logger.Error(message);
+        }
+
+        public static void Error(string message, Exception ex)
+        {
+            _logger.Error(message, ex);
         }
 
         public static void Fatal(string message)
         {
-            WriteLog("FATAL", message);
+            _logger.Fatal(message);
+        }
+
+        public static void Fatal(string message, Exception ex)
+        {
+            _logger.Fatal(message, ex);
         }
 
         public static void Close()
         {
-            lock (_lock)
-            {
-                try
-                {
-                    _logWriter?.Close();
-                    _logWriter?.Dispose();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"[ERROR] Failed to close logger: {ex.Message}");
-                }
-            }
+            // log4net handles cleanup automatically, but we'll shutdown for good measure
+            LogManager.Shutdown();
         }
     }
 }

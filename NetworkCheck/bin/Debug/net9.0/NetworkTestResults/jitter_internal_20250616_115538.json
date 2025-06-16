@@ -1,0 +1,13 @@
+{
+  "Category": "internal",
+  "TestType": "jitter",
+  "TestTimestamp": "2025-06-16T11:55:38.0921511-05:00",
+  "Results": [
+    {
+      "Host": "git.rockfin.com",
+      "Value": 2.5298221281347035,
+      "Success": true,
+      "Timestamp": "2025-06-16T11:55:38.0882037-05:00"
+    }
+  ]
+}
