@@ -1,21 +1,19 @@
-# NetworkCheck - Network Scanner and Monitoring Tool
+# NetworkCheck - Network Scanner and Location Detection Tool
 
-A comprehensive C# .NET 9.0 console application for network interface scanning, IP address detection, VPN status monitoring, and network performance measurement.
+A C# .NET 9.0 console application that performs network interface scanning to identify IP addresses and determine work location status. The main purpose is to distinguish between VPN connections (indicating remote work) and office network connections.
 
 ## Features
 
-- **IP Address Detection**: Scans all network interfaces to identify active IP addresses
-- **VPN Detection**: Automatically detects VPN connections (GlobalProtect and Ivanti)
-- **Work Location Determination**: Identifies whether you're working from home (VPN) or office
-- **Network Performance Monitoring**: Measures ping times and jitter to various hosts
-- **Continuous Monitoring**: Runs every 3 minutes and logs results to files
-- **WSL Interface Filtering**: Automatically excludes WSL network interfaces
+- **Network Interface Scanning**: Scans all active network interfaces to identify IP addresses
+- **VPN Detection**: Automatically detects VPN connections using IP range analysis
+- **Work Location Determination**: Identifies whether you're working from home (VPN) or office (local network)
+- **IP Classification**: Uses regex patterns to identify specific IP ranges for different locations
+- **DHCP Failure Detection**: Detects APIPA addresses (169.254.x.x) indicating network issues
 
 ## Prerequisites
 
 - .NET 9.0 SDK
-- Windows OS (due to Windows Registry access for VPN detection)
-- Administrator privileges may be required for some network operations
+- Windows OS (recommended for full VPN detection capabilities)
 
 ## Installation
 
@@ -38,64 +36,46 @@ dotnet run --project NetworkCheck/NetworkCheck.csproj
 ```
 
 The application will:
-1. Scan network interfaces every 3 minutes
-2. Display IP addresses and VPN status
-3. Run ping tests to multiple hosts
-4. Save results to text files in the `results` directory
-
-### Output Files
-
-The application creates two CSV files in the `results` directory:
-- `median_ping_results.txt`: Contains median ping times for each host
-- `jitter_results.txt`: Contains jitter measurements for each host
-
-Format:
-```
-Timestamp,Host,Value(ms)
-2024-01-16 14:30:00,google.com,25.50
-```
+1. Scan all active network interfaces
+2. Identify IP addresses and classify them by range
+3. Detect VPN connections and determine work location
+4. Display results including primary IP address and location status
 
 ## Architecture
 
+The application consists of two main classes in the `NetworkScanner` namespace:
+
+- **NetworkScanResult**: Data container that holds scan results including IP addresses, VPN detection status, and work location determination
+- **NetworkIpAddress**: Static utility class that performs the actual network interface scanning and analysis
+
 ### Main Components
 
-1. **NetworkScanner**: Core IP address scanning and detection
+1. **NetworkIpAddress**: Core IP address scanning and location detection
 2. **VpnDetection**: Windows Registry-based VPN status detection
    - GlobalProtectVPNStatus
    - IvantiVPNStatus
    - WindowsRegistryReader
-3. **NetworkPingAndJitterTest**: Network performance measurement
-4. **FileLogger**: Dual console/file logging system
+   - VPNStatusChecker
+3. **ConnectivityCheck**: Network connectivity testing
+4. **FileLogger**: Console-based logging system
+5. **PingAndJitter**: Network performance measurement utilities
 
 ### IP Address Classification
 
 The application recognizes:
 - VPN ranges: 10.93.x.x (Detroit), 10.94.x.x (Troy), 10.95.x.x (Palo Alto)
-- Office networks: 10.x.x.x and 172.16.x.x ranges
+- Office networks: Various 10.x.x.x and 172.16.x.x ranges
 - DHCP failure: 169.254.x.x (APIPA)
 
-## Logging
+### Core Method
 
-Logs are saved to:
-- Primary location: `<app-directory>/logs/network_scan_YYYYMMDD_HHMMSS.log`
-- Fallback location: `%TEMP%/NetworkCheckLogs/` (if no write permissions)
+`NetworkIpAddress.GetComputerIpAddress()` returns a `NetworkScanResult` containing:
+- Primary IP address
+- Work location status (home vs office)
+- Map of all relevant IP addresses found
+- VPN detection details if applicable
 
-## Configuration
-
-### Hosts Tested
-- External: google.com
-- Internal AES: RCD2AES601.mi.corp.rockfin.com, RCD1AES601.mi.corp.rockfin.com
-- Internal: git.rockfin.com
-
-### Timing
-- Scan interval: 3 minutes
-- Ping count per host: 10
-- Ping interval: 1 second
-- Ping timeout: 5 seconds
-
-## Stopping the Application
-
-Press `Ctrl+C` to gracefully shut down the application.
+The application prioritizes VPN IP addresses when multiple interfaces are active and handles both IPv4 and IPv6 addresses (though focuses primarily on IPv4 for location determination).
 
 ## Development
 
@@ -109,10 +89,20 @@ NetworkCheck/
     ├── NetworkCheck.csproj
     ├── Program.cs
     ├── NetworkIpAddress.cs
-    ├── NetworkPingAndJitterTest.cs
     ├── ConnectivityCheck.cs
-    ├── PingResult.cs
     ├── FileLogger.cs
+    ├── Config/
+    │   ├── appsettings.json
+    │   └── log4net.config
+    ├── PingAndJitter/
+    │   ├── NetworkPingSettings.cs
+    │   ├── PingJitterFileData.cs
+    │   ├── PingJitterResultReader.cs
+    │   ├── PingJitterResultWriter.cs
+    │   └── PingResult.cs
+    ├── Tests/
+    │   └── PingAndJItter/
+    │       └── NetworkPingAndJitterTest.cs
     └── VpnDetection/
         ├── WindowsRegistryReader.cs
         ├── GlobalProtectVPNStatus.cs
@@ -125,11 +115,10 @@ NetworkCheck/
 dotnet build --configuration Release
 ```
 
-## Known Issues
-
-- VPN detection only works on Windows due to registry access
-- Some network operations may require administrator privileges
-- WSL interfaces are automatically excluded
+### Running Tests
+```bash
+dotnet test
+```
 
 ## License
 

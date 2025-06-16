@@ -21,3 +21,9 @@ Timestamp,Host,Jitter(ms),Success
 2025-06-16 17:24:26,RCD1AES601.mi.corp.rockfin.com,23.34,True
 2025-06-16 17:29:44,RCD2AES601.mi.corp.rockfin.com,7.57,True
 2025-06-16 17:29:56,RCD1AES601.mi.corp.rockfin.com,113.48,True
+2025-06-16 18:04:01,RCD2AES601.mi.corp.rockfin.com,66.26,True
+2025-06-16 18:04:12,RCD1AES601.mi.corp.rockfin.com,59.66,True
+2025-06-16 18:05:23,RCD2AES601.mi.corp.rockfin.com,14.95,True
+2025-06-16 18:05:34,RCD1AES601.mi.corp.rockfin.com,42.78,True
+2025-06-16 18:11:57,RCD2AES601.mi.corp.rockfin.com,80.63,True
+2025-06-16 18:12:13,RCD1AES601.mi.corp.rockfin.com,52.19,True

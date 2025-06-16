@@ -1,6 +1,7 @@
 using NetworkScanner;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Threading;
@@ -30,6 +31,7 @@ try
 {
     while (true)
     {
+        var testStartTime = Stopwatch.StartNew();
         Console.WriteLine($"\n[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Running network scan...");
         
         // Run IP address scan
@@ -63,7 +65,11 @@ try
         Console.WriteLine($"  - {medianPingFile}");
         Console.WriteLine($"  - {jitterFile}");
         
+        testStartTime.Stop();
+        var elapsedSeconds = testStartTime.Elapsed.TotalSeconds;
+        
         Console.WriteLine("\n" + new string('-', 80));
+        Console.WriteLine($"Test completed in {elapsedSeconds:F2} seconds");
         Console.WriteLine("Waiting 3 minutes before next scan...");
         
         Thread.Sleep(30000); // 3 minutes = 180 seconds = 180000 milliseconds

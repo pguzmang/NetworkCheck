@@ -10,3 +10,6 @@ Timestamp,Host,Jitter(ms),Success
 2025-06-16 17:22:47,google.com,19.50,True
 2025-06-16 17:24:03,google.com,58.48,True
 2025-06-16 17:29:33,google.com,44.77,True
+2025-06-16 18:03:49,google.com,28.32,True
+2025-06-16 18:05:11,google.com,31.47,True
+2025-06-16 18:11:36,google.com,99.94,True
