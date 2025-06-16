@@ -1,0 +1,5 @@
+Timestamp,Host,Jitter(ms)
+2025-06-16 00:32:54,google.com,6.00
+2025-06-16 00:32:54,RCD2AES601.mi.corp.rockfin.com,3.05
+2025-06-16 00:32:54,RCD1AES601.mi.corp.rockfin.com,1.33
+2025-06-16 00:32:54,git.rockfin.com,1.70

@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\networkipaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\networkipaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileLogger.cs",
+              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
+              "RelativeDocumentMoniker": "NetworkCheck\\FileLogger.cs",
+              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
+              "RelativeToolTip": "NetworkCheck\\FileLogger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T05:27:24.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NetworkIpAddress.cs",
+              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\NetworkIpAddress.cs",
+              "RelativeDocumentMoniker": "NetworkCheck\\NetworkIpAddress.cs",
+              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\NetworkIpAddress.cs",
+              "RelativeToolTip": "NetworkCheck\\NetworkIpAddress.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T05:27:22.557Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
