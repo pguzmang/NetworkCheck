@@ -174,7 +174,7 @@ namespace NetworkScanner
         
         private void RotateFile(string filename)
         {
-            var directory = Path.GetDirectoryName(filename);
+            var directory = Path.GetDirectoryName(filename) ?? _outputDirectory;
             var nameWithoutExtension = Path.GetFileNameWithoutExtension(filename);
             var extension = Path.GetExtension(filename);
             
