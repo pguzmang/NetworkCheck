@@ -48,21 +48,48 @@ namespace NetworkScanner
             var results = new List<PingResult>();
             
             // External tests
-            foreach (var server in _settings.Servers.External)
+            if (_settings.Servers.External?.Count > 0)
             {
-                results.Add(TestPingAndJitter(server));
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"\n🌍 Testing External Servers ({_settings.Servers.External.Count})");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine(new string('─', 50));
+                Console.ResetColor();
+                
+                foreach (var server in _settings.Servers.External)
+                {
+                    results.Add(TestPingAndJitter(server));
+                }
             }
             
             // Internal AES tests
-            foreach (var server in _settings.Servers.AesServers)
+            if (_settings.Servers.AesServers?.Count > 0)
             {
-                results.Add(TestPingAndJitter(server));
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine($"\n🔒 Testing AES Servers ({_settings.Servers.AesServers.Count})");
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine(new string('─', 50));
+                Console.ResetColor();
+                
+                foreach (var server in _settings.Servers.AesServers)
+                {
+                    results.Add(TestPingAndJitter(server));
+                }
             }
             
             // Internal tests
-            foreach (var server in _settings.Servers.Internal)
+            if (_settings.Servers.Internal?.Count > 0)
             {
-                results.Add(TestPingAndJitter(server));
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"\n🏢 Testing Internal Servers ({_settings.Servers.Internal.Count})");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine(new string('─', 50));
+                Console.ResetColor();
+                
+                foreach (var server in _settings.Servers.Internal)
+                {
+                    results.Add(TestPingAndJitter(server));
+                }
             }
             
             // Write results to separate files
@@ -98,10 +125,23 @@ namespace NetworkScanner
 
         public static PingResult TestPingAndJitter(string host)
         {
+            // Display test header with colors
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"\n📊 Testing: ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(host);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine($" (sending {_settings.PingSettings.PingCount} pings)");
+            Console.ResetColor();
+            
             int pingCount = _settings.PingSettings.PingCount; // Number of pings to send
             List<long> pingTimes = new List<long>();
             long pingTime;
             StringBuilder logMessages = new StringBuilder();
+            
+            // Display progress bar setup
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("   Progress: [");
 
             for (int i = 0; i < pingCount; i++)
             {
@@ -112,19 +152,45 @@ namespace NetworkScanner
                     {
                         pingTimes.Add(pingTime);
                         logMessages.AppendLine($"Ping {i + 1}: {pingTime} ms to {host}");
+                        
+                        // Color-coded progress indicator
+                        if (pingTime < 50)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write("█"); // Green for fast pings
+                        }
+                        else if (pingTime < 100)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write("█"); // Yellow for medium pings
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.Write("█"); // Red for slow pings
+                        }
                     }
                     else
                     {
                         logMessages.AppendLine($"Ping {i + 1}: Request timed out to {host}");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.Write("░"); // Dark pattern for timeouts
                     }
                     Thread.Sleep(_settings.PingSettings.DelayBetweenPingsMilliseconds); // Wait between pings
                 }
                 catch (Exception e)
                 {
                     logMessages.AppendLine($"Error during ping to {host}: {e.Message}");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("X"); // X for errors
                 }
             }
 
+            // Close progress bar
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("]");
+            Console.ResetColor();
+            
             PingResult result = new PingResult
             {
                 Host = host,
@@ -137,9 +203,59 @@ namespace NetworkScanner
                 double averagePing = pingTimes.Average();
                 double medianPing = CalculateMedian(pingTimes);
                 double jitter = CalculateJitter(pingTimes);
-
+                
                 result.MedianPing = medianPing;
                 result.Jitter = jitter;
+                
+                // Display colored statistics
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("   ✓ Results: ");
+                
+                // Average ping with color coding
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("Avg: ");
+                if (averagePing < 50)
+                    Console.ForegroundColor = ConsoleColor.Green;
+                else if (averagePing < 100)
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                else
+                    Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write($"{averagePing:F1}ms ");
+                
+                // Median ping
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("| Med: ");
+                if (medianPing < 50)
+                    Console.ForegroundColor = ConsoleColor.Green;
+                else if (medianPing < 100)
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                else
+                    Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write($"{medianPing:F1}ms ");
+                
+                // Jitter
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("| Jitter: ");
+                if (jitter < 10)
+                    Console.ForegroundColor = ConsoleColor.Green;
+                else if (jitter < 25)
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                else
+                    Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write($"{jitter:F1}ms ");
+                
+                // Success rate
+                double successRate = (double)pingTimes.Count / pingCount * 100;
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("| Success: ");
+                if (successRate == 100)
+                    Console.ForegroundColor = ConsoleColor.Green;
+                else if (successRate >= 80)
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                else
+                    Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"{successRate:F0}%");
+                Console.ResetColor();
 
                 logMessages.AppendLine($"Average Ping: {averagePing:F2} ms to {host}");
                 logMessages.AppendLine($"Median Ping: {medianPing:F2} ms to {host}");
@@ -147,6 +263,10 @@ namespace NetworkScanner
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"   ✗ FAILED: No successful pings to {host}");
+                Console.ResetColor();
+                
                 logMessages.AppendLine($"No successful pings to {host}");
                 result.MedianPing = -1;
                 result.Jitter = -1;

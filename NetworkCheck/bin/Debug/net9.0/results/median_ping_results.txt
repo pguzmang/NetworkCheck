@@ -1,5 +1,5 @@
 Timestamp,Host,MedianPing(ms)
-2025-06-17 18:16:18,google.com,10.00
-2025-06-17 18:16:18,RCD2AES601.mi.corp.rockfin.com,2.00
-2025-06-17 18:16:18,RCD1AES601.mi.corp.rockfin.com,1.50
-2025-06-17 18:16:18,git.rockfin.com,2.00
+2025-06-17 18:23:30,google.com,10.00
+2025-06-17 18:23:30,RCD2AES601.mi.corp.rockfin.com,2.00
+2025-06-17 18:23:30,RCD1AES601.mi.corp.rockfin.com,1.00
+2025-06-17 18:23:30,git.rockfin.com,1.50

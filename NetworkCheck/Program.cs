@@ -56,9 +56,36 @@ try
         var result = NetworkIpAddress.GetComputerIpAddress();
 
         Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.Write("Primary IP Address: ");
-        Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine(result.PrimaryIpAddress);
+        Console.Write("🌐 Primary IP Address: ");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.Write(result.PrimaryIpAddress);
+        
+        // Add IP type classification with colors
+        if (result.PrimaryIpAddress.StartsWith("10."))
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine(" [Private Network]");
+        }
+        else if (result.PrimaryIpAddress.StartsWith("192.168."))
+        {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine(" [Local Network]");
+        }
+        else if (result.PrimaryIpAddress.StartsWith("172."))
+        {
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine(" [Corporate Network]");
+        }
+        else if (result.PrimaryIpAddress.StartsWith("169.254."))
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(" [APIPA - No DHCP]");
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(" [Public IP]");
+        }
         Console.ResetColor();
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write("Working from Home: ");
@@ -85,13 +112,54 @@ try
         }
 
         Console.ForegroundColor = ConsoleColor.Blue;
-        Console.WriteLine($"All IP Addresses Found: {result.FinalUserIpAddressMap.Count}");
+        Console.WriteLine($"🔍 Network Interfaces Detected: {result.FinalUserIpAddressMap.Count}");
         Console.ResetColor();
+        
+        int interfaceCount = 0;
         foreach (var ip in result.FinalUserIpAddressMap)
         {
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.Write("  ");
-            Console.ForegroundColor = ConsoleColor.White;
+            interfaceCount++;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write($"   [{interfaceCount}] ");
+            
+            // Color code IP addresses by type
+            if (ip.Key.StartsWith("10.93.") || ip.Key.StartsWith("10.94.") || ip.Key.StartsWith("10.95."))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("🔐 VPN: ");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+            }
+            else if (ip.Key.StartsWith("10."))
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("🏢 Corporate: ");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else if (ip.Key.StartsWith("192.168."))
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.Write("🏠 Local: ");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else if (ip.Key.StartsWith("172."))
+            {
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.Write("🏗️ Internal: ");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else if (ip.Key.StartsWith("169.254."))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("⚠️ APIPA: ");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("🌍 Public: ");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+            }
+            
             Console.Write(ip.Key);
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine($" ({ip.Value})");
