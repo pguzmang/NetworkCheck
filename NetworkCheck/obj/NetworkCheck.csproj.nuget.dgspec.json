@@ -58,9 +58,9 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
-            "Microsoft.Extensions.Configuration.Json": {
+            "NetEscapades.Configuration.Yaml": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[3.1.0, )"
             },
             "log4net": {
               "target": "Package",

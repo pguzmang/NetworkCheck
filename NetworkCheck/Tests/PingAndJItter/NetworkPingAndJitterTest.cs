@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using NetEscapades.Configuration.Yaml;
 using System.IO;
 
 namespace NetworkScanner
@@ -24,11 +25,22 @@ namespace NetworkScanner
         {
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("Config/appsettings.json", optional: false, reloadOnChange: true)
+                .AddYamlFile("Config/appsettings.yml", optional: false, reloadOnChange: true)
                 .Build();
                 
             _settings = new NetworkCheck.NetworkPingSettings();
             configuration.GetSection("NetworkPingAndJitterTest").Bind(_settings);
+            
+            // Add colored console output for configuration loading
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("📋 Configuration loaded from YAML file");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine($"   • External servers: {_settings.Servers.External?.Count ?? 0}");
+            Console.WriteLine($"   • Internal servers: {_settings.Servers.Internal?.Count ?? 0}");
+            Console.WriteLine($"   • AES servers: {_settings.Servers.AesServers?.Count ?? 0}");
+            Console.WriteLine($"   • Ping count: {_settings.PingSettings.PingCount}");
+            Console.WriteLine($"   • Timeout: {_settings.PingSettings.TimeoutMilliseconds}ms");
+            Console.ResetColor();
         }
 
         public static List<PingResult> RunAllTests()

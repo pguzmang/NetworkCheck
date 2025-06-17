@@ -1,0 +1,13 @@
+NetworkPingAndJitterTest:
+  Servers:
+    External:
+      - google.com
+    Internal:
+      - git.rockfin.com
+    AesServers:
+      - RCD2AES601.mi.corp.rockfin.com
+      - RCD1AES601.mi.corp.rockfin.com
+  PingSettings:
+    PingCount: 10
+    TimeoutMilliseconds: 5000
+    DelayBetweenPingsMilliseconds: 1000

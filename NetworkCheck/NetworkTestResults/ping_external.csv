@@ -1,0 +1,6 @@
+Timestamp,Host,MedianPing(ms),Success
+2025-06-17 18:02:32,google.com,10.00,True
+2025-06-17 18:03:43,google.com,9.00,True
+2025-06-17 18:04:54,google.com,9.00,True
+2025-06-17 18:06:04,google.com,10.00,True
+2025-06-17 18:15:47,google.com,10.00,True

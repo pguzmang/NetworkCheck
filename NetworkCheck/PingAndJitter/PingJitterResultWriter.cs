@@ -74,7 +74,17 @@ namespace NetworkScanner
                     {
                         var comparison = result.MedianPing > currentMedian.Value ? "above" : 
                                        result.MedianPing < currentMedian.Value ? "below" : "equal to";
-                        Console.WriteLine($"Last ping value for {category} ({result.MedianPing:F2} ms) is {comparison} current median ({currentMedian.Value:F2} ms)");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.Write($"Last ping value for {category} (");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write($"{result.MedianPing:F2} ms");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.Write($") is {comparison} current median (");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write($"{currentMedian.Value:F2} ms");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine(")");
+                        Console.ResetColor();
                     }
                 }
             }
@@ -85,7 +95,11 @@ namespace NetworkScanner
             var median = CalculateMedianFromCsv(filename, "MedianPing(ms)");
             if (median.HasValue)
             {
-                Console.WriteLine($"Current median ping for {category}: {median.Value:F2} ms");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write($"Current median ping for {category}: ");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine($"{median.Value:F2} ms");
+                Console.ResetColor();
             }
         }
         
@@ -129,7 +143,17 @@ namespace NetworkScanner
                     {
                         var comparison = result.Jitter > currentMedian.Value ? "above" : 
                                        result.Jitter < currentMedian.Value ? "below" : "equal to";
-                        Console.WriteLine($"Last jitter value for {category} ({result.Jitter:F2} ms) is {comparison} current median ({currentMedian.Value:F2} ms)");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($"Last jitter value for {category} (");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write($"{result.Jitter:F2} ms");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write($") is {comparison} current median (");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write($"{currentMedian.Value:F2} ms");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine(")");
+                        Console.ResetColor();
                     }
                 }
             }
@@ -140,7 +164,11 @@ namespace NetworkScanner
             var median = CalculateMedianFromCsv(filename, "Jitter(ms)");
             if (median.HasValue)
             {
-                Console.WriteLine($"Current median jitter for {category}: {median.Value:F2} ms");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write($"Current median jitter for {category}: ");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"{median.Value:F2} ms");
+                Console.ResetColor();
             }
         }
         

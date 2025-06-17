@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\tests\\pingandjitter\\networkpingandjittertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\tests\\pingandjitter\\networkpingandjittertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\config\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\config\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\pingandjitter\\pingjitterresultwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\pingandjitter\\pingjitterresultwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\pingandjitter\\pingjitterfiledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\pingandjitter\\pingjitterfiledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\pingandjitter\\networkpingandjittertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\pingandjitter\\networkpingandjittertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\connectivitycheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,14 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\networkipaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\networkipaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\config\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\config\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,37 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PingJitterResultWriter.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
-              "RelativeDocumentMoniker": "NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
-              "RelativeToolTip": "NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAuwE8AAAANAAAAAAAAAA==",
+              "Title": "NetworkPingAndJitterTest.cs",
+              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
+              "RelativeDocumentMoniker": "NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
+              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
+              "RelativeToolTip": "NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T21:25:36.9Z",
+              "WhenOpened": "2025-06-16T23:26:26.651Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PingJitterFileData.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
-              "RelativeDocumentMoniker": "NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
-              "RelativeToolTip": "NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T21:25:29.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ConnectivityCheck.cs",
               "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\ConnectivityCheck.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\ConnectivityCheck.cs",
@@ -84,8 +71,7 @@
               "RelativeToolTip": "NetworkCheck\\ConnectivityCheck.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAkwBgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T13:56:55.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T13:56:55.03Z"
             },
             {
               "$type": "Document",
@@ -95,7 +81,7 @@
               "RelativeDocumentMoniker": "NetworkCheck\\Program.cs",
               "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Program.cs",
               "RelativeToolTip": "NetworkCheck\\Program.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwBkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T05:32:28.261Z",
               "EditorCaption": ""
@@ -103,19 +89,55 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "NetworkPingAndJitterTest.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\NetworkPingAndJitterTest.cs",
-              "RelativeDocumentMoniker": "NetworkCheck\\PingAndJitter\\NetworkPingAndJitterTest.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\NetworkPingAndJitterTest.cs",
-              "RelativeToolTip": "NetworkCheck\\PingAndJitter\\NetworkPingAndJitterTest.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAuwHMAAAAdAAAAAAAAAA==",
+              "Title": "FileLogger.cs",
+              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
+              "RelativeDocumentMoniker": "NetworkCheck\\FileLogger.cs",
+              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
+              "RelativeToolTip": "NetworkCheck\\FileLogger.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwBIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T21:34:40.981Z",
+              "WhenOpened": "2025-06-16T05:27:24.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PingJitterResultWriter.cs",
+              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
+              "RelativeDocumentMoniker": "NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
+              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
+              "RelativeToolTip": "NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAuwE8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T21:25:36.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Config\\appsettings.json",
+              "RelativeDocumentMoniker": "NetworkCheck\\Config\\appsettings.json",
+              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Config\\appsettings.json",
+              "RelativeToolTip": "NetworkCheck\\Config\\appsettings.json",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-16T14:59:11.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "PingJitterFileData.cs",
+              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
+              "RelativeDocumentMoniker": "NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
+              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
+              "RelativeToolTip": "NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T21:25:29.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PingJitterResultReader.cs",
               "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultReader.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\PingAndJitter\\PingJitterResultReader.cs",
@@ -123,38 +145,11 @@
               "RelativeToolTip": "NetworkCheck\\PingAndJitter\\PingJitterResultReader.cs",
               "ViewState": "AgIAAG8AAAAAAAAAAAAmwBYAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T21:36:12.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Config\\appsettings.json",
-              "RelativeDocumentMoniker": "NetworkCheck\\Config\\appsettings.json",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Config\\appsettings.json",
-              "RelativeToolTip": "NetworkCheck\\Config\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-16T14:59:11.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T21:36:12.875Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "FileLogger.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
-              "RelativeDocumentMoniker": "NetworkCheck\\FileLogger.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
-              "RelativeToolTip": "NetworkCheck\\FileLogger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T05:27:24.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "NetworkIpAddress.cs",
               "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\NetworkIpAddress.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\NetworkIpAddress.cs",
@@ -162,8 +157,7 @@
               "RelativeToolTip": "NetworkCheck\\NetworkIpAddress.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAqwF8AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T05:27:22.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T05:27:22.557Z"
             }
           ]
         }
