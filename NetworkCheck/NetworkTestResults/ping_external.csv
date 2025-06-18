@@ -8,3 +8,6 @@ Timestamp,Host,MedianPing(ms),Success
 2025-06-17 18:42:52,google.com,9.50,True
 2025-06-17 21:07:22,google.com,9.00,True
 2025-06-17 21:35:47,google.com,56.00,True
+2025-06-18 09:35:19,google.com,10.00,True
+2025-06-18 09:39:59,google.com,10.50,True
+2025-06-18 10:10:37,google.com,10.00,True

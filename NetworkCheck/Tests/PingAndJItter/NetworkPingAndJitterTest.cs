@@ -45,6 +45,11 @@ namespace NetworkScanner
 
         public static List<PingResult> RunAllTests()
         {
+            return RunAllTests(null);
+        }
+        
+        public static List<PingResult> RunAllTests(NetworkScanResult? networkScanResult)
+        {
             var results = new List<PingResult>();
             
             // External tests
@@ -92,9 +97,18 @@ namespace NetworkScanner
                 }
             }
             
-            // Write results to separate files
-            var writer = new PingJitterResultWriter();
-            writer.WriteResults(results);
+            // Write results to categorized files if network scan result is available
+            if (networkScanResult != null)
+            {
+                var categorizedWriter = new CategorizedPingJitterResultWriter(networkScanResult);
+                categorizedWriter.WriteResults(results);
+            }
+            else
+            {
+                // Fallback to original writer if no network scan result available
+                var writer = new PingJitterResultWriter();
+                writer.WriteResults(results);
+            }
             
             return results;
         }

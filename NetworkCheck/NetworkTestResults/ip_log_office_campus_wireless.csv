@@ -1,0 +1,2 @@
+Timestamp,PrimaryIP,WorkingFromHome,WiFiSSID,EthernetDnsSuffix,VpnDetected,VpnIP,NetworkCategory
+2025-06-18 10:10:26,10.5.85.80,False,AMAZE_Wireless,,False,,office_campus_wireless

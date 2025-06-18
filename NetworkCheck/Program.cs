@@ -59,6 +59,10 @@ async Task RunMainLoop()
         
         // Run IP address scan
         var result = NetworkIpAddress.GetComputerIpAddress();
+        
+        // Log IP address result to categorized files
+        var categorizedIpWriter = new CategorizedIpAddressResultWriter();
+        categorizedIpWriter.WriteIpAddressResult(result);
 
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write("🌐 Primary IP Address: ");
@@ -201,7 +205,7 @@ async Task RunMainLoop()
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.WriteLine("📊 Starting ping tests for all servers...");
         Console.ResetColor();
-        var pingResults = NetworkPingAndJitterTest.RunAllTests();
+        var pingResults = NetworkPingAndJitterTest.RunAllTests(result);
         
         // Display summary of ping results
         var successCount = pingResults.Count(r => r.Success);
