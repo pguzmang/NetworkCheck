@@ -1,0 +1,18 @@
+# Visual Studio and .NET build artifacts
+.vs/
+bin/
+obj/
+
+# Other common entries for .NET projects
+*.bak
+*.user
+*.suo
+*.log
+*.pdb
+*.exe
+*.dll
+*.zip
+[Dd]ebug/
+[Rr]elease/
+*.nupkg
+packages/

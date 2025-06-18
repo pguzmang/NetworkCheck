@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 Console.CancelKeyPress += (sender, e) =>
 {
@@ -43,10 +44,14 @@ Console.WriteLine($"   📄 Median Ping: {Path.GetFileName(medianPingFile)}");
 Console.WriteLine($"   📄 Jitter Data: {Path.GetFileName(jitterFile)}");
 Console.ResetColor();
 
-try
+await RunMainLoop();
+
+async Task RunMainLoop()
 {
-    while (true)
+    try
     {
+        while (true)
+        {
         var testStartTime = Stopwatch.StartNew();
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine($"\n[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Running network scan...");
@@ -201,6 +206,42 @@ try
         Console.WriteLine($"  - {jitterFile}");
         Console.ResetColor();
         
+        // Ask user if they want to run a speed test
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write("\n🚀 Would you like to run a bandwidth speed test? (y/n): ");
+        Console.ForegroundColor = ConsoleColor.White;
+        var userInput = Console.ReadLine()?.Trim().ToLower();
+        Console.ResetColor();
+        
+        if (userInput == "y" || userInput == "yes")
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("\n📊 Starting bandwidth speed test...");
+            Console.ResetColor();
+            
+            try
+            {
+                await NetworkCheck.SpeedTest.RunSpeedTest();
+                
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\n✅ Speed test completed successfully!");
+                Console.ResetColor();
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\n❌ Speed test failed: {ex.Message}");
+                Console.ResetColor();
+                FileLogger.Error($"Speed test error: {ex}");
+            }
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("Skipping speed test...");
+            Console.ResetColor();
+        }
+        
         testStartTime.Stop();
         var elapsedSeconds = testStartTime.Elapsed.TotalSeconds;
         
@@ -223,24 +264,24 @@ try
             Console.Write($"\r⏳ Next scan in: {i} seconds...");
             Thread.Sleep(30000);
         }
-        Console.WriteLine("\r" + new string(' ', 50)); // Clear the countdown line
-        Console.ResetColor();
+            Console.WriteLine("\r" + new string(' ', 50)); // Clear the countdown line
+            Console.ResetColor();
+        }
     }
-}
-catch (Exception ex)
-{
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine($"Error occurred: {ex.Message}");
-    Console.ResetColor();
-    FileLogger.Fatal($"Fatal error in main loop: {ex}");
-}
-finally
-{
-    // Ensure the logger is properly closed
-    FileLogger.Close();
-}
+    catch (Exception ex)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"Error occurred: {ex.Message}");
+        Console.ResetColor();
+        FileLogger.Fatal($"Fatal error in main loop: {ex}");
+    }
+    finally
+    {
+        // Ensure the logger is properly closed
+        FileLogger.Close();
+    }
 
-void SavePingResults(List<PingResult> results, string medianFile, string jitterFile)
+    void SavePingResults(List<PingResult> results, string medianFile, string jitterFile)
 {
     var timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
     var medianBuilder = new StringBuilder();
@@ -283,7 +324,8 @@ void SavePingResults(List<PingResult> results, string medianFile, string jitterF
         }
     }
     
-    File.AppendAllText(medianFile, medianBuilder.ToString());
-    File.AppendAllText(jitterFile, jitterBuilder.ToString());
+        File.AppendAllText(medianFile, medianBuilder.ToString());
+        File.AppendAllText(jitterFile, jitterBuilder.ToString());
+    }
 }
 

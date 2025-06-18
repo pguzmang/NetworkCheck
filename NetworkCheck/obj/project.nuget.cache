@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fupy3MmnN2M=",
+  "dgSpecHash": "uaqAJ98Dre4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\NetworkCheck.csproj",
+  "projectFilePath": "C:\\Github\\NetworkCheck\\NetworkCheck\\NetworkCheck.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pguillen\\.nuget\\packages\\log4net\\2.0.17\\log4net.2.0.17.nupkg.sha512",
     "C:\\Users\\pguillen\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.0\\microsoft.extensions.configuration.9.0.0.nupkg.sha512",

@@ -735,11 +735,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\NetworkCheck.csproj",
+      "projectUniqueName": "C:\\Github\\NetworkCheck\\NetworkCheck\\NetworkCheck.csproj",
       "projectName": "NetworkCheck",
-      "projectPath": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\NetworkCheck.csproj",
+      "projectPath": "C:\\Github\\NetworkCheck\\NetworkCheck\\NetworkCheck.csproj",
       "packagesPath": "C:\\Users\\pguillen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\obj\\",
+      "outputPath": "C:\\Github\\NetworkCheck\\NetworkCheck\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
