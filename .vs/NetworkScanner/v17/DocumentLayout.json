@@ -1,41 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\",
+  "WorkspaceRootPath": "C:\\Github\\NetworkCheck\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\config\\appsettings.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\config\\appsettings.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\tests\\pingandjitter\\networkpingandjittertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\externalspeedtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\externalspeedtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\config\\appsettings.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\config\\appsettings.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\tests\\pingandjitter\\networkpingandjittertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\tests\\pingandjitter\\networkpingandjittertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\pingandjitter\\pingjitterresultwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\pingandjitter\\pingjitterresultwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\pingandjitter\\pingjitterresultwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\pingandjitter\\pingjitterfiledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\pingandjitter\\pingjitterfiledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\pingandjitter\\pingjitterfiledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\connectivitycheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\connectivitycheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\connectivitycheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\pingandjitter\\pingjitterresultreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\pingandjitter\\pingjitterresultreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\pingandjitter\\pingjitterresultreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\users\\pguillen\\source\\repos\\networkcheck\\networkcheck\\networkipaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|c:\\github\\networkcheck\\networkcheck\\networkipaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D14ECFE4-FDD4-4952-91C3-8460EF5339C8}|NetworkCheck\\NetworkCheck.csproj|solutionrelative:networkcheck\\networkipaddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,15 +50,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ExternalSpeedTest.cs",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\ExternalSpeedTest.cs",
+              "RelativeDocumentMoniker": "NetworkCheck\\ExternalSpeedTest.cs",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\ExternalSpeedTest.cs",
+              "RelativeToolTip": "NetworkCheck\\ExternalSpeedTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T22:36:20.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "appsettings.yml",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Config\\appsettings.yml",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\Config\\appsettings.yml",
               "RelativeDocumentMoniker": "NetworkCheck\\Config\\appsettings.yml",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Config\\appsettings.yml",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\Config\\appsettings.yml",
               "RelativeToolTip": "NetworkCheck\\Config\\appsettings.yml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
@@ -63,24 +80,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NetworkPingAndJitterTest.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
               "RelativeToolTip": "NetworkCheck\\Tests\\PingAndJItter\\NetworkPingAndJitterTest.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T23:26:26.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T23:26:26.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ConnectivityCheck.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\ConnectivityCheck.cs",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\ConnectivityCheck.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\ConnectivityCheck.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\ConnectivityCheck.cs",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\ConnectivityCheck.cs",
               "RelativeToolTip": "NetworkCheck\\ConnectivityCheck.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAkwBgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -88,24 +104,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Program.cs",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\Program.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\Program.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\Program.cs",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\Program.cs",
               "RelativeToolTip": "NetworkCheck\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAuwC4AAABIAAAAAAAAAA==",
+              "ViewState": "AgIAABMBAAAAAAAAAAAwwBUBAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T05:32:28.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FileLogger.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\FileLogger.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\FileLogger.cs",
               "RelativeToolTip": "NetworkCheck\\FileLogger.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAUwBIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -113,11 +129,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PingJitterResultWriter.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
               "RelativeToolTip": "NetworkCheck\\PingAndJitter\\PingJitterResultWriter.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAuwE8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -125,11 +141,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PingJitterFileData.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
               "RelativeToolTip": "NetworkCheck\\PingAndJitter\\PingJitterFileData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -137,11 +153,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PingJitterResultReader.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultReader.cs",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultReader.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\PingAndJitter\\PingJitterResultReader.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultReader.cs",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\PingAndJitter\\PingJitterResultReader.cs",
               "RelativeToolTip": "NetworkCheck\\PingAndJitter\\PingJitterResultReader.cs",
               "ViewState": "AgIAAG8AAAAAAAAAAAAmwBYAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -149,11 +165,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "NetworkIpAddress.cs",
-              "DocumentMoniker": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\NetworkIpAddress.cs",
+              "DocumentMoniker": "C:\\Github\\NetworkCheck\\NetworkCheck\\NetworkIpAddress.cs",
               "RelativeDocumentMoniker": "NetworkCheck\\NetworkIpAddress.cs",
-              "ToolTip": "C:\\Users\\pguillen\\source\\repos\\NetworkCheck\\NetworkCheck\\NetworkIpAddress.cs",
+              "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\NetworkIpAddress.cs",
               "RelativeToolTip": "NetworkCheck\\NetworkIpAddress.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAqwF8AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

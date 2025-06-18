@@ -15,9 +15,9 @@ using log4net;
 
 namespace NetworkCheck
 {
-    public class SpeedTest
+    public class ExternalSpeedTest
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(SpeedTest));
+        private static readonly ILog log = LogManager.GetLogger(typeof(ExternalSpeedTest));
         
         private const int chunkSizeForDownload = 100 * 1000 * 1000; // 100MB
         private const int totalBitsForDownload = chunkSizeForDownload * 8; // 100MB to 800 Mbits

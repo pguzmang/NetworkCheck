@@ -79,3 +79,6 @@ C:\Github\NetworkCheck\NetworkCheck\obj\Debug\net9.0\refint\NetworkCheck.dll
 C:\Github\NetworkCheck\NetworkCheck\obj\Debug\net9.0\NetworkCheck.pdb
 C:\Github\NetworkCheck\NetworkCheck\obj\Debug\net9.0\NetworkCheck.genruntimeconfig.cache
 C:\Github\NetworkCheck\NetworkCheck\obj\Debug\net9.0\ref\NetworkCheck.dll
+C:\Github\NetworkCheck\NetworkCheck\bin\Debug\net9.0\System.CodeDom.dll
+C:\Github\NetworkCheck\NetworkCheck\bin\Debug\net9.0\System.Management.dll
+C:\Github\NetworkCheck\NetworkCheck\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Management.dll

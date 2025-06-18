@@ -6,6 +6,7 @@ using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks; // For asynchronous operations
 using NetworkScanner.VpnDetection;
+using System.Management; // For WMI queries to get network names
 
 namespace NetworkScanner
 {
@@ -26,6 +27,12 @@ namespace NetworkScanner
         public string VpnIpAddressFound { get; private set; } = string.Empty;
         public string VpnInterfaceTypeFound { get; private set; } = string.Empty;
         public string VpnMessageFound { get; private set; } = string.Empty;
+
+        // WiFi SSID information
+        public string WiFiSSID { get; set; } = string.Empty;
+        
+        // Ethernet DNS suffix information
+        public string EthernetDnsSuffix { get; set; } = string.Empty;
 
         /// <summary>
         /// Stores all relevant IP addresses found during the scan, mapped to their interface types.
@@ -267,6 +274,35 @@ namespace NetworkScanner
             string description = networkInterface.Description; // C# uses Description
             string interfaceType = GetInterfaceType(name, description);
 
+            // Get WiFi SSID using native Windows APIs if this is a WiFi interface
+            if (IsWifiInterface(name, description) && string.IsNullOrWhiteSpace(result.WiFiSSID))
+            {
+                string wifiSSID = WiFiNetworkInfo.GetCurrentWiFiSSID();
+                if (!string.IsNullOrWhiteSpace(wifiSSID) && !wifiSSID.StartsWith("Error") && !wifiSSID.Contains("not connected") && !wifiSSID.Contains("No Wi-Fi"))
+                {
+                    result.WiFiSSID = wifiSSID;
+                    logMessages.AppendLine($"WiFi SSID detected: {wifiSSID}");
+                }
+            }
+
+            // Get Ethernet DNS suffix if this is an Ethernet interface
+            if (IsEthernetInterface(name, description) && string.IsNullOrWhiteSpace(result.EthernetDnsSuffix))
+            {
+                try
+                {
+                    IPInterfaceProperties ipProperties = networkInterface.GetIPProperties();
+                    if (!string.IsNullOrWhiteSpace(ipProperties.DnsSuffix))
+                    {
+                        result.EthernetDnsSuffix = ipProperties.DnsSuffix;
+                        logMessages.AppendLine($"Ethernet DNS suffix detected: {ipProperties.DnsSuffix}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    logMessages.AppendLine($"Error getting DNS suffix for Ethernet interface: {ex.Message}");
+                }
+            }
+
             logMessages.AppendLine($"Processing IPv4 address: {ipAddressString} , Interface {name} , description: {description} , type: {interfaceType}");
 
             // Check for WSL interface and skip it
@@ -423,6 +459,8 @@ namespace NetworkScanner
 
             FileLogger.Info($"Summary Complete - Determined Primary IP: {result.PrimaryIpAddress}");
             FileLogger.Info($"Summary Complete - Determined Working From Home: {result.IsConsideredWorkingFromHome}");
+            FileLogger.Info($"Summary Complete - WiFi SSID: {result.WiFiSSID}");
+            FileLogger.Info($"Summary Complete - Ethernet DNS Suffix: {result.EthernetDnsSuffix}");
             FileLogger.Info($"Summary Complete - Final IP Map Size: {result.FinalUserIpAddressMap.Count}");
             FileLogger.Info($"Summary Complete - Final IP Map: {string.Join(", ", result.FinalUserIpAddressMap.Select(kv => $"{kv.Key}: {kv.Value}"))}");
 
@@ -564,6 +602,36 @@ namespace NetworkScanner
             }
             return false;
         }
+
+
+        /// <summary>
+        /// Determines if the network interface is a WiFi interface.
+        /// </summary>
+        private static bool IsWifiInterface(string name, string description)
+        {
+            string lowerName = (name ?? string.Empty).ToLowerInvariant();
+            string lowerDescription = (description ?? string.Empty).ToLowerInvariant();
+            
+            return lowerName.StartsWith("wlan") || lowerName.StartsWith("wifi") || 
+                   lowerDescription.Contains("wi-fi") || lowerDescription.Contains("wireless");
+        }
+
+        /// <summary>
+        /// Determines if the network interface is an Ethernet interface.
+        /// </summary>
+        private static bool IsEthernetInterface(string name, string description)
+        {
+            string lowerName = (name ?? string.Empty).ToLowerInvariant();
+            string lowerDescription = (description ?? string.Empty).ToLowerInvariant();
+            
+            return (lowerName.StartsWith("eth") && lowerName != "eth9") || 
+                   lowerName.StartsWith("en") || 
+                   lowerDescription.Contains("ethernet");
+        }
+
+
+
+
 
         /// <summary>
         /// Creates and starts a new Task to asynchronously get the computer's IP address.

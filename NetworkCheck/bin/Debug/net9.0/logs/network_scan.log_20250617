@@ -1791,3 +1791,1027 @@ Jitter: 0.46 ms to git.rockfin.com
 [2025-06-17 18:43:39.739] [INFO] Download speed: 262.3 Mbps (average time: 3.050s)
 [2025-06-17 18:43:45.898] [INFO] Upload speed: 131.2 Mbps (average time: 1.524s)
 [2025-06-17 18:43:45.898] [INFO] Speed test completed successfully
+[2025-06-17 21:07:11.341] [INFO] Logger initialized using log4net
+[2025-06-17 21:07:11.345] [DEBUG] Starting network IP address scan.
+[2025-06-17 21:07:11.893] [DEBUG] IP address 10.22.64.146 matches pattern. Location/Status: Big Office Network
+[2025-06-17 21:07:11.894] [DEBUG] Processing IPv4 address: 10.22.64.146 , Interface Ethernet 2 , description: Realtek USB GbE Family Controller , type: This is an Ethernet interface. , network: Ethernet 2
+Added non-VPN IP 10.22.64.146 to all relevant IPs.
+
+[2025-06-17 21:07:12.137] [DEBUG] Processing IPv4 address: 172.22.176.1 , Interface vEthernet (WSL) , description: Hyper-V Virtual Ethernet Adapter , type: This is an Ethernet interface. , network: Hyper-V Virtual Ethernet Adapter
+Skipped WSL interface IP address: 172.22.176.1
+
+[2025-06-17 21:07:12.357] [DEBUG] Processing IPv4 address: 172.21.240.1 , Interface vEthernet (WSL (Hyper-V firewall)) , description: Hyper-V Virtual Ethernet Adapter #2 , type: This is an Ethernet interface. , network: Hyper-V Virtual Ethernet Adapter #2
+Skipped WSL interface IP address: 172.21.240.1
+
+[2025-06-17 21:07:12.358] [INFO] No VPN detected. Assuming Working from the Office.
+[2025-06-17 21:07:12.358] [DEBUG] IP address 10.22.64.146 matches pattern. Location/Status: Big Office Network
+[2025-06-17 21:07:12.359] [INFO] Summary Complete - Determined Primary IP: 10.22.64.146
+[2025-06-17 21:07:12.359] [INFO] Summary Complete - Determined Working From Home: False
+[2025-06-17 21:07:12.359] [INFO] Summary Complete - Network Name: Ethernet 2
+[2025-06-17 21:07:12.359] [INFO] Summary Complete - Final IP Map Size: 1
+[2025-06-17 21:07:12.361] [INFO] Summary Complete - Final IP Map: 10.22.64.146: This is an Ethernet interface.
+[2025-06-17 21:07:12.361] [DEBUG] **** Skipped items during network scan:  *****
+[2025-06-17 21:07:12.361] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:07:12.361] [DEBUG]   - Skipped link-local IPv6 address: fe80::2b74:1177:902a:85a9%14
+[2025-06-17 21:07:12.361] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:07:12.361] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2 (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:07:12.361] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped interface: Bluetooth Device (Personal Area Network) (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped interface: Software Loopback Interface 1 (Operational: True, Loopback: True, HasAddresses: True)
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped link-local IPv6 address: fe80::d5ff:606a:824:7e97%46
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped WSL interface IP address: 172.22.176.1 (Interface: vEthernet (WSL), Description: Hyper-V Virtual Ethernet Adapter)
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped link-local IPv6 address: fe80::686e:1f4b:9938:6776%53
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped WSL interface IP address: 172.21.240.1 (Interface: vEthernet (WSL (Hyper-V firewall)), Description: Hyper-V Virtual Ethernet Adapter #2)
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.362] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Virtual Filtering Platform VMSwitch Extension-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.363] [DEBUG]   - Skipped interface: WAN Miniport (IP)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: Microsoft Kernel Debug Network Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: WAN Miniport (IP) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: WAN Miniport (IPv6) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller #2 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.364] [DEBUG]   - Skipped interface: WAN Miniport (PPPOE) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Virtual WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.365] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.366] [DEBUG]   - Skipped interface: Microsoft Teredo Tunneling Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.366] [DEBUG]   - Skipped interface: Microsoft IP-HTTPS Platform Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.366] [DEBUG]   - Skipped interface: Microsoft 6to4 Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.366] [DEBUG]   - Skipped interface: WAN Miniport (SSTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.366] [DEBUG]   - Skipped interface: WAN Miniport (IKEv2) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.366] [DEBUG]   - Skipped interface: WAN Miniport (L2TP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.366] [DEBUG]   - Skipped interface: WAN Miniport (PPTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:07:12.366] [DEBUG] **** End of Skipped items ****
+[2025-06-17 21:07:12.366] [DEBUG] Finished network IP address scan.
+[2025-06-17 21:07:12.392] [INFO] Internet connection is available
+[2025-06-17 21:07:22.799] [DEBUG] Ping 1: 9 ms to google.com
+Ping 2: 9 ms to google.com
+Ping 3: 10 ms to google.com
+Ping 4: 9 ms to google.com
+Ping 5: 9 ms to google.com
+Ping 6: 9 ms to google.com
+Ping 7: 10 ms to google.com
+Ping 8: 10 ms to google.com
+Ping 9: 10 ms to google.com
+Ping 10: 9 ms to google.com
+Average Ping: 9.40 ms to google.com
+Median Ping: 9.00 ms to google.com
+Jitter: 0.49 ms to google.com
+
+[2025-06-17 21:07:32.951] [DEBUG] Ping 1: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 2: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 3: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 4: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 5: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 6: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 7: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 8: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 9: 3 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 10: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Average Ping: 2.10 ms to RCD2AES601.mi.corp.rockfin.com
+Median Ping: 2.00 ms to RCD2AES601.mi.corp.rockfin.com
+Jitter: 0.30 ms to RCD2AES601.mi.corp.rockfin.com
+
+[2025-06-17 21:07:43.104] [DEBUG] Ping 1: 1 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 2: 2 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 3: 2 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 4: 2 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 5: 1 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 6: 1 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 7: 1 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 8: 2 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 9: 2 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 10: 2 ms to RCD1AES601.mi.corp.rockfin.com
+Average Ping: 1.60 ms to RCD1AES601.mi.corp.rockfin.com
+Median Ping: 2.00 ms to RCD1AES601.mi.corp.rockfin.com
+Jitter: 0.49 ms to RCD1AES601.mi.corp.rockfin.com
+
+[2025-06-17 21:07:53.276] [DEBUG] Ping 1: 2 ms to git.rockfin.com
+Ping 2: 2 ms to git.rockfin.com
+Ping 3: 2 ms to git.rockfin.com
+Ping 4: 2 ms to git.rockfin.com
+Ping 5: 2 ms to git.rockfin.com
+Ping 6: 2 ms to git.rockfin.com
+Ping 7: 1 ms to git.rockfin.com
+Ping 8: 2 ms to git.rockfin.com
+Ping 9: 1 ms to git.rockfin.com
+Ping 10: 2 ms to git.rockfin.com
+Average Ping: 1.80 ms to git.rockfin.com
+Median Ping: 2.00 ms to git.rockfin.com
+Jitter: 0.40 ms to git.rockfin.com
+
+[2025-06-17 21:07:53.301] [INFO] Ping results for external appended to: NetworkTestResults\ping_external.csv
+[2025-06-17 21:07:53.327] [INFO] Ping results for internalaes appended to: NetworkTestResults\ping_internalaes.csv
+[2025-06-17 21:07:53.354] [INFO] Ping results for internal appended to: NetworkTestResults\ping_internal.csv
+[2025-06-17 21:07:53.373] [INFO] Jitter results for external appended to: NetworkTestResults\jitter_external.csv
+[2025-06-17 21:07:53.390] [INFO] Jitter results for internalaes appended to: NetworkTestResults\jitter_internalaes.csv
+[2025-06-17 21:07:53.407] [INFO] Jitter results for internal appended to: NetworkTestResults\jitter_internal.csv
+[2025-06-17 21:10:18.357] [INFO] Logger initialized using log4net
+[2025-06-17 21:10:18.366] [DEBUG] Starting network IP address scan.
+[2025-06-17 21:10:19.300] [DEBUG] Error getting WiFi SSID: Invalid class 
+System.Management.ManagementException: Invalid class 
+   at System.Management.ManagementException.ThrowWithExtendedInfo(ManagementStatus errorCode)
+   at System.Management.ManagementObjectCollection.ManagementObjectEnumerator.MoveNext()
+   at NetworkScanner.NetworkIpAddress.GetWifiSSID(NetworkInterface networkInterface) in C:\Github\NetworkCheck\NetworkCheck\NetworkIpAddress.cs:line 660
+[2025-06-17 21:10:19.367] [DEBUG] IP address 10.5.85.80 matches pattern. Location/Status: Campus/Amaze Wireless
+[2025-06-17 21:10:19.367] [DEBUG] Processing IPv4 address: 10.5.85.80 , Interface Wi-Fi , description: Intel(R) Wi-Fi 6 AX201 160MHz , type: This is a Wi-Fi interface. , network: 
+Added non-VPN IP 10.5.85.80 to all relevant IPs.
+
+[2025-06-17 21:10:19.829] [DEBUG] Processing IPv4 address: 172.22.176.1 , Interface vEthernet (WSL) , description: Hyper-V Virtual Ethernet Adapter , type: This is an Ethernet interface. , network: Hyper-V Virtual Ethernet Adapter
+Skipped WSL interface IP address: 172.22.176.1
+
+[2025-06-17 21:10:20.239] [DEBUG] Processing IPv4 address: 172.21.240.1 , Interface vEthernet (WSL (Hyper-V firewall)) , description: Hyper-V Virtual Ethernet Adapter #2 , type: This is an Ethernet interface. , network: Hyper-V Virtual Ethernet Adapter #2
+Skipped WSL interface IP address: 172.21.240.1
+
+[2025-06-17 21:10:20.243] [INFO] No VPN detected. Assuming Working from the Office.
+[2025-06-17 21:10:20.243] [DEBUG] IP address 10.5.85.80 matches pattern. Location/Status: Campus/Amaze Wireless
+[2025-06-17 21:10:20.244] [INFO] Summary Complete - Determined Primary IP: 10.5.85.80
+[2025-06-17 21:10:20.244] [INFO] Summary Complete - Determined Working From Home: False
+[2025-06-17 21:10:20.245] [INFO] Summary Complete - Network Name: Hyper-V Virtual Ethernet Adapter
+[2025-06-17 21:10:20.245] [INFO] Summary Complete - Final IP Map Size: 1
+[2025-06-17 21:10:20.248] [INFO] Summary Complete - Final IP Map: 10.5.85.80: This is a Wi-Fi interface.
+[2025-06-17 21:10:20.249] [DEBUG] **** Skipped items during network scan:  *****
+[2025-06-17 21:10:20.249] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:10:20.249] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:10:20.249] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2 (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:10:20.249] [DEBUG]   - Skipped link-local IPv6 address: fe80::3d24:f9e:6bf8:1f5c%6
+[2025-06-17 21:10:20.250] [DEBUG]   - Skipped interface: Bluetooth Device (Personal Area Network) (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:10:20.250] [DEBUG]   - Skipped interface: Software Loopback Interface 1 (Operational: True, Loopback: True, HasAddresses: True)
+[2025-06-17 21:10:20.250] [DEBUG]   - Skipped link-local IPv6 address: fe80::d5ff:606a:824:7e97%46
+[2025-06-17 21:10:20.250] [DEBUG]   - Skipped WSL interface IP address: 172.22.176.1 (Interface: vEthernet (WSL), Description: Hyper-V Virtual Ethernet Adapter)
+[2025-06-17 21:10:20.251] [DEBUG]   - Skipped link-local IPv6 address: fe80::686e:1f4b:9938:6776%53
+[2025-06-17 21:10:20.251] [DEBUG]   - Skipped WSL interface IP address: 172.21.240.1 (Interface: vEthernet (WSL (Hyper-V firewall)), Description: Hyper-V Virtual Ethernet Adapter #2)
+[2025-06-17 21:10:20.251] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.251] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.251] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.251] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.252] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.252] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.252] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.252] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.252] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Virtual Filtering Platform VMSwitch Extension-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.252] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.253] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.253] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.253] [DEBUG]   - Skipped interface: WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.253] [DEBUG]   - Skipped interface: WAN Miniport (IP)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.253] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.253] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.254] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.254] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.254] [DEBUG]   - Skipped interface: Microsoft Kernel Debug Network Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.254] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.254] [DEBUG]   - Skipped interface: WAN Miniport (IP) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.255] [DEBUG]   - Skipped interface: WAN Miniport (IPv6) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.255] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.255] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.255] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.255] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller #2 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.256] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.256] [DEBUG]   - Skipped interface: WAN Miniport (PPPOE) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.256] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.256] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Virtual WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.257] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Native WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.257] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.257] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.257] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.257] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.258] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.258] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.258] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.258] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.258] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.259] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.259] [DEBUG]   - Skipped interface: Microsoft Teredo Tunneling Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.259] [DEBUG]   - Skipped interface: Microsoft IP-HTTPS Platform Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.259] [DEBUG]   - Skipped interface: Microsoft 6to4 Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.260] [DEBUG]   - Skipped interface: WAN Miniport (SSTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.260] [DEBUG]   - Skipped interface: WAN Miniport (IKEv2) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.260] [DEBUG]   - Skipped interface: WAN Miniport (L2TP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.260] [DEBUG]   - Skipped interface: WAN Miniport (PPTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:10:20.260] [DEBUG] **** End of Skipped items ****
+[2025-06-17 21:10:20.261] [DEBUG] Finished network IP address scan.
+[2025-06-17 21:10:20.304] [INFO] Internet connection is available
+[2025-06-17 21:10:30.755] [DEBUG] Ping 1: 13 ms to google.com
+Ping 2: 11 ms to google.com
+Ping 3: 12 ms to google.com
+Ping 4: 12 ms to google.com
+Ping 5: 15 ms to google.com
+Ping 6: 12 ms to google.com
+Ping 7: 11 ms to google.com
+Ping 8: 11 ms to google.com
+Ping 9: 12 ms to google.com
+Ping 10: 12 ms to google.com
+Average Ping: 12.10 ms to google.com
+Median Ping: 12.00 ms to google.com
+Jitter: 1.14 ms to google.com
+
+[2025-06-17 21:11:24.795] [INFO] Logger initialized using log4net
+[2025-06-17 21:11:24.801] [DEBUG] Starting network IP address scan.
+[2025-06-17 21:11:25.633] [DEBUG] Global Protect disabled registry value: 0
+[2025-06-17 21:11:25.633] [DEBUG] Global Protect Status: On
+[2025-06-17 21:11:25.633] [DEBUG] IP address 10.94.201.26 matches pattern. Location/Status: Working from Home (Troy)
+[2025-06-17 21:11:25.634] [DEBUG] Processing IPv4 address: 10.94.201.26 , Interface Ethernet 5 , description: PANGP Virtual Ethernet Adapter Secure , type: This is an Ethernet interface. , network: Ethernet 5
+Identified as a VPN IP address: 10.94.201.26
+VPN Status Check Result: True
+Set primary VPN IP found during scan to: 10.94.201.26
+
+[2025-06-17 21:11:25.643] [DEBUG] This is an IPv6 Address: 2600:1007:b029:4739:90df:5728:6ffb:d211
+Interface Wi-Fi, description: Intel(R) Wi-Fi 6 AX201 160MHz, type: This is a Wi-Fi interface.
+
+[2025-06-17 21:11:25.643] [DEBUG] This is an IPv6 Address: 2600:1007:b029:4739:fc32:b465:f0c3:a4f2
+Interface Wi-Fi, description: Intel(R) Wi-Fi 6 AX201 160MHz, type: This is a Wi-Fi interface.
+
+[2025-06-17 21:11:25.999] [DEBUG] Error getting WiFi SSID: Invalid class 
+System.Management.ManagementException: Invalid class 
+   at System.Management.ManagementException.ThrowWithExtendedInfo(ManagementStatus errorCode)
+   at System.Management.ManagementObjectCollection.ManagementObjectEnumerator.MoveNext()
+   at NetworkScanner.NetworkIpAddress.GetWifiSSID(NetworkInterface networkInterface) in C:\Github\NetworkCheck\NetworkCheck\NetworkIpAddress.cs:line 660
+[2025-06-17 21:11:26.039] [DEBUG] Processing IPv4 address: 172.20.10.8 , Interface Wi-Fi , description: Intel(R) Wi-Fi 6 AX201 160MHz , type: This is a Wi-Fi interface. , network: 
+Added non-VPN IP 172.20.10.8 to all relevant IPs.
+
+[2025-06-17 21:11:26.406] [DEBUG] Processing IPv4 address: 172.22.176.1 , Interface vEthernet (WSL) , description: Hyper-V Virtual Ethernet Adapter , type: This is an Ethernet interface. , network: Hyper-V Virtual Ethernet Adapter
+Skipped WSL interface IP address: 172.22.176.1
+
+[2025-06-17 21:11:26.786] [DEBUG] Processing IPv4 address: 172.21.240.1 , Interface vEthernet (WSL (Hyper-V firewall)) , description: Hyper-V Virtual Ethernet Adapter #2 , type: This is an Ethernet interface. , network: Hyper-V Virtual Ethernet Adapter #2
+Skipped WSL interface IP address: 172.21.240.1
+
+[2025-06-17 21:11:26.788] [INFO] VPN IP address found during scan: 10.94.201.26 (This is an Ethernet interface.)
+[2025-06-17 21:11:26.789] [INFO] Working from Home (Troy)
+[2025-06-17 21:11:26.789] [INFO] Summary Complete - Determined Primary IP: 10.94.201.26
+[2025-06-17 21:11:26.790] [INFO] Summary Complete - Determined Working From Home: True
+[2025-06-17 21:11:26.790] [INFO] Summary Complete - Network Name: Ethernet 5
+[2025-06-17 21:11:26.790] [INFO] Summary Complete - Final IP Map Size: 2
+[2025-06-17 21:11:26.792] [INFO] Summary Complete - Final IP Map: 10.94.201.26: This is an Ethernet interface., 172.20.10.8: This is a Wi-Fi interface.
+[2025-06-17 21:11:26.793] [DEBUG] **** Skipped items during network scan:  *****
+[2025-06-17 21:11:26.794] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:11:26.794] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:11:26.794] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2 (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:11:26.794] [DEBUG]   - Skipped link-local IPv6 address: fe80::3d24:f9e:6bf8:1f5c%6
+[2025-06-17 21:11:26.794] [DEBUG]   - Skipped interface: Bluetooth Device (Personal Area Network) (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:11:26.794] [DEBUG]   - Skipped interface: Software Loopback Interface 1 (Operational: True, Loopback: True, HasAddresses: True)
+[2025-06-17 21:11:26.795] [DEBUG]   - Skipped link-local IPv6 address: fe80::d5ff:606a:824:7e97%46
+[2025-06-17 21:11:26.795] [DEBUG]   - Skipped WSL interface IP address: 172.22.176.1 (Interface: vEthernet (WSL), Description: Hyper-V Virtual Ethernet Adapter)
+[2025-06-17 21:11:26.795] [DEBUG]   - Skipped link-local IPv6 address: fe80::686e:1f4b:9938:6776%53
+[2025-06-17 21:11:26.795] [DEBUG]   - Skipped WSL interface IP address: 172.21.240.1 (Interface: vEthernet (WSL (Hyper-V firewall)), Description: Hyper-V Virtual Ethernet Adapter #2)
+[2025-06-17 21:11:26.795] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.796] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.796] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.796] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.796] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.796] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.797] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.797] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.797] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.797] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.798] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.798] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Virtual Filtering Platform VMSwitch Extension-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.798] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.798] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.798] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.799] [DEBUG]   - Skipped interface: WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.799] [DEBUG]   - Skipped interface: WAN Miniport (IP)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.799] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.799] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.799] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.799] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.800] [DEBUG]   - Skipped interface: Microsoft Kernel Debug Network Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.800] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.800] [DEBUG]   - Skipped interface: WAN Miniport (IP) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.801] [DEBUG]   - Skipped interface: WAN Miniport (IPv6) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.801] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.801] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.801] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller #2 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.802] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.802] [DEBUG]   - Skipped interface: WAN Miniport (PPPOE) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.802] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.802] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Virtual WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.802] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Native WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.803] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.803] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.803] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.803] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.803] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.804] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.804] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.804] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.804] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.805] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.805] [DEBUG]   - Skipped interface: Microsoft Teredo Tunneling Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.805] [DEBUG]   - Skipped interface: Microsoft IP-HTTPS Platform Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.806] [DEBUG]   - Skipped interface: Microsoft 6to4 Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.806] [DEBUG]   - Skipped interface: WAN Miniport (SSTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.806] [DEBUG]   - Skipped interface: WAN Miniport (IKEv2) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.806] [DEBUG]   - Skipped interface: WAN Miniport (L2TP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.806] [DEBUG]   - Skipped interface: WAN Miniport (PPTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:11:26.806] [DEBUG] **** End of Skipped items ****
+[2025-06-17 21:11:26.807] [DEBUG] Finished network IP address scan.
+[2025-06-17 21:11:26.895] [INFO] Internet connection is available
+[2025-06-17 21:35:34.237] [INFO] Logger initialized using log4net
+[2025-06-17 21:35:34.247] [DEBUG] Starting network IP address scan.
+[2025-06-17 21:35:35.095] [DEBUG] Global Protect disabled registry value: 0
+[2025-06-17 21:35:35.096] [DEBUG] Global Protect Status: On
+[2025-06-17 21:35:35.096] [DEBUG] IP address 10.94.201.26 matches pattern. Location/Status: Working from Home (Troy)
+[2025-06-17 21:35:35.097] [DEBUG] Processing IPv4 address: 10.94.201.26 , Interface Ethernet 5 , description: PANGP Virtual Ethernet Adapter Secure , type: This is an Ethernet interface. , network: Ethernet 5
+Identified as a VPN IP address: 10.94.201.26
+VPN Status Check Result: True
+Set primary VPN IP found during scan to: 10.94.201.26
+
+[2025-06-17 21:35:35.109] [DEBUG] This is an IPv6 Address: 2600:1007:b029:4739:90df:5728:6ffb:d211
+Interface Wi-Fi, description: Intel(R) Wi-Fi 6 AX201 160MHz, type: This is a Wi-Fi interface.
+
+[2025-06-17 21:35:35.109] [DEBUG] This is an IPv6 Address: 2600:1007:b029:4739:fc32:b465:f0c3:a4f2
+Interface Wi-Fi, description: Intel(R) Wi-Fi 6 AX201 160MHz, type: This is a Wi-Fi interface.
+
+[2025-06-17 21:35:35.510] [DEBUG] Error getting WiFi SSID: Invalid class 
+System.Management.ManagementException: Invalid class 
+   at System.Management.ManagementException.ThrowWithExtendedInfo(ManagementStatus errorCode)
+   at System.Management.ManagementObjectCollection.ManagementObjectEnumerator.MoveNext()
+   at NetworkScanner.NetworkIpAddress.GetWifiSSID(NetworkInterface networkInterface) in C:\Github\NetworkCheck\NetworkCheck\NetworkIpAddress.cs:line 675
+[2025-06-17 21:35:36.034] [DEBUG] WiFi SSID detected: iPhone de Paulo
+Processing IPv4 address: 172.20.10.8 , Interface Wi-Fi , description: Intel(R) Wi-Fi 6 AX201 160MHz , type: This is a Wi-Fi interface. , network: 
+Added non-VPN IP 172.20.10.8 to all relevant IPs.
+
+[2025-06-17 21:35:36.370] [DEBUG] Processing IPv4 address: 172.22.176.1 , Interface vEthernet (WSL) , description: Hyper-V Virtual Ethernet Adapter , type: This is an Ethernet interface. , network: Hyper-V Virtual Ethernet Adapter
+Skipped WSL interface IP address: 172.22.176.1
+
+[2025-06-17 21:35:36.672] [DEBUG] Processing IPv4 address: 172.21.240.1 , Interface vEthernet (WSL (Hyper-V firewall)) , description: Hyper-V Virtual Ethernet Adapter #2 , type: This is an Ethernet interface. , network: Hyper-V Virtual Ethernet Adapter #2
+Skipped WSL interface IP address: 172.21.240.1
+
+[2025-06-17 21:35:36.676] [INFO] VPN IP address found during scan: 10.94.201.26 (This is an Ethernet interface.)
+[2025-06-17 21:35:36.676] [INFO] Working from Home (Troy)
+[2025-06-17 21:35:36.678] [INFO] Summary Complete - Determined Primary IP: 10.94.201.26
+[2025-06-17 21:35:36.679] [INFO] Summary Complete - Determined Working From Home: True
+[2025-06-17 21:35:36.679] [INFO] Summary Complete - Network Name: Ethernet 5
+[2025-06-17 21:35:36.680] [INFO] Summary Complete - WiFi SSID: iPhone de Paulo
+[2025-06-17 21:35:36.680] [INFO] Summary Complete - Final IP Map Size: 2
+[2025-06-17 21:35:36.683] [INFO] Summary Complete - Final IP Map: 10.94.201.26: This is an Ethernet interface., 172.20.10.8: This is a Wi-Fi interface.
+[2025-06-17 21:35:36.683] [DEBUG] **** Skipped items during network scan:  *****
+[2025-06-17 21:35:36.684] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:35:36.684] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:35:36.684] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2 (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:35:36.684] [DEBUG]   - Skipped link-local IPv6 address: fe80::3d24:f9e:6bf8:1f5c%6
+[2025-06-17 21:35:36.684] [DEBUG]   - Skipped interface: Bluetooth Device (Personal Area Network) (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:35:36.684] [DEBUG]   - Skipped interface: Software Loopback Interface 1 (Operational: True, Loopback: True, HasAddresses: True)
+[2025-06-17 21:35:36.685] [DEBUG]   - Skipped link-local IPv6 address: fe80::d5ff:606a:824:7e97%46
+[2025-06-17 21:35:36.685] [DEBUG]   - Skipped WSL interface IP address: 172.22.176.1 (Interface: vEthernet (WSL), Description: Hyper-V Virtual Ethernet Adapter)
+[2025-06-17 21:35:36.685] [DEBUG]   - Skipped link-local IPv6 address: fe80::686e:1f4b:9938:6776%53
+[2025-06-17 21:35:36.685] [DEBUG]   - Skipped WSL interface IP address: 172.21.240.1 (Interface: vEthernet (WSL (Hyper-V firewall)), Description: Hyper-V Virtual Ethernet Adapter #2)
+[2025-06-17 21:35:36.685] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.685] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.686] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.686] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.687] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.687] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.687] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.687] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.687] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.688] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.688] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.688] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Virtual Filtering Platform VMSwitch Extension-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.688] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.689] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.689] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.689] [DEBUG]   - Skipped interface: WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.689] [DEBUG]   - Skipped interface: WAN Miniport (IP)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.689] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.690] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.690] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.690] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.690] [DEBUG]   - Skipped interface: Microsoft Kernel Debug Network Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.690] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.691] [DEBUG]   - Skipped interface: WAN Miniport (IP) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.691] [DEBUG]   - Skipped interface: WAN Miniport (IPv6) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.691] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.691] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.691] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller #2 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.691] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.692] [DEBUG]   - Skipped interface: WAN Miniport (PPPOE) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.692] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.692] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Virtual WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.692] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Native WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.692] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.692] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.693] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.693] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.693] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.693] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.694] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.694] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.694] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.694] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.694] [DEBUG]   - Skipped interface: Microsoft Teredo Tunneling Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.695] [DEBUG]   - Skipped interface: Microsoft IP-HTTPS Platform Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.695] [DEBUG]   - Skipped interface: Microsoft 6to4 Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.695] [DEBUG]   - Skipped interface: WAN Miniport (SSTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.696] [DEBUG]   - Skipped interface: WAN Miniport (IKEv2) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.696] [DEBUG]   - Skipped interface: WAN Miniport (L2TP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.696] [DEBUG]   - Skipped interface: WAN Miniport (PPTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:35:36.696] [DEBUG] **** End of Skipped items ****
+[2025-06-17 21:35:36.697] [DEBUG] Finished network IP address scan.
+[2025-06-17 21:35:36.765] [INFO] Internet connection is available
+[2025-06-17 21:35:47.657] [DEBUG] Ping 1: 50 ms to google.com
+Ping 2: 45 ms to google.com
+Ping 3: 84 ms to google.com
+Ping 4: 45 ms to google.com
+Ping 5: 45 ms to google.com
+Ping 6: 64 ms to google.com
+Ping 7: 63 ms to google.com
+Ping 8: 62 ms to google.com
+Ping 9: 62 ms to google.com
+Ping 10: 46 ms to google.com
+Average Ping: 56.60 ms to google.com
+Median Ping: 56.00 ms to google.com
+Jitter: 12.10 ms to google.com
+
+[2025-06-17 21:35:58.296] [DEBUG] Ping 1: 37 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 2: 34 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 3: 46 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 4: 72 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 5: 62 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 6: 66 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 7: 36 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 8: 35 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 9: 40 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 10: 36 ms to RCD2AES601.mi.corp.rockfin.com
+Average Ping: 46.40 ms to RCD2AES601.mi.corp.rockfin.com
+Median Ping: 38.50 ms to RCD2AES601.mi.corp.rockfin.com
+Jitter: 13.83 ms to RCD2AES601.mi.corp.rockfin.com
+
+[2025-06-17 21:36:09.071] [DEBUG] Ping 1: 33 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 2: 62 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 3: 69 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 4: 72 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 5: 45 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 6: 32 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 7: 73 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 8: 44 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 9: 46 ms to RCD1AES601.mi.corp.rockfin.com
+Ping 10: 73 ms to RCD1AES601.mi.corp.rockfin.com
+Average Ping: 54.90 ms to RCD1AES601.mi.corp.rockfin.com
+Median Ping: 54.00 ms to RCD1AES601.mi.corp.rockfin.com
+Jitter: 15.80 ms to RCD1AES601.mi.corp.rockfin.com
+
+[2025-06-17 21:36:20.376] [DEBUG] Ping 1: 42 ms to git.rockfin.com
+Ping 2: 38 ms to git.rockfin.com
+Ping 3: 41 ms to git.rockfin.com
+Ping 4: 45 ms to git.rockfin.com
+Ping 5: 38 ms to git.rockfin.com
+Ping 6: 58 ms to git.rockfin.com
+Ping 7: 45 ms to git.rockfin.com
+Ping 8: 40 ms to git.rockfin.com
+Ping 9: 70 ms to git.rockfin.com
+Ping 10: 81 ms to git.rockfin.com
+Average Ping: 49.80 ms to git.rockfin.com
+Median Ping: 43.50 ms to git.rockfin.com
+Jitter: 14.17 ms to git.rockfin.com
+
+[2025-06-17 21:36:20.476] [INFO] Ping results for external appended to: NetworkTestResults\ping_external.csv
+[2025-06-17 21:36:21.204] [INFO] Ping results for internalaes appended to: NetworkTestResults\ping_internalaes.csv
+[2025-06-17 21:36:21.346] [INFO] Ping results for internal appended to: NetworkTestResults\ping_internal.csv
+[2025-06-17 21:36:21.530] [INFO] Jitter results for external appended to: NetworkTestResults\jitter_external.csv
+[2025-06-17 21:36:21.672] [INFO] Jitter results for internalaes appended to: NetworkTestResults\jitter_internalaes.csv
+[2025-06-17 21:36:22.074] [INFO] Jitter results for internal appended to: NetworkTestResults\jitter_internal.csv
+[2025-06-17 21:45:26.232] [INFO] Logger initialized using log4net
+[2025-06-17 21:45:26.237] [DEBUG] Starting network IP address scan.
+[2025-06-17 21:45:26.448] [DEBUG] IP address 10.22.64.146 matches pattern. Location/Status: Big Office Network
+[2025-06-17 21:45:26.449] [DEBUG] Processing IPv4 address: 10.22.64.146 , Interface Ethernet 2 , description: Realtek USB GbE Family Controller , type: This is an Ethernet interface.
+Added non-VPN IP 10.22.64.146 to all relevant IPs.
+
+[2025-06-17 21:45:26.449] [DEBUG] Processing IPv4 address: 172.22.176.1 , Interface vEthernet (WSL) , description: Hyper-V Virtual Ethernet Adapter , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.22.176.1
+
+[2025-06-17 21:45:26.449] [DEBUG] Processing IPv4 address: 172.21.240.1 , Interface vEthernet (WSL (Hyper-V firewall)) , description: Hyper-V Virtual Ethernet Adapter #2 , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.21.240.1
+
+[2025-06-17 21:45:26.451] [INFO] No VPN detected. Assuming Working from the Office.
+[2025-06-17 21:45:26.451] [DEBUG] IP address 10.22.64.146 matches pattern. Location/Status: Big Office Network
+[2025-06-17 21:45:26.452] [INFO] Summary Complete - Determined Primary IP: 10.22.64.146
+[2025-06-17 21:45:26.452] [INFO] Summary Complete - Determined Working From Home: False
+[2025-06-17 21:45:26.452] [INFO] Summary Complete - WiFi SSID: 
+[2025-06-17 21:45:26.452] [INFO] Summary Complete - Final IP Map Size: 1
+[2025-06-17 21:45:26.454] [INFO] Summary Complete - Final IP Map: 10.22.64.146: This is an Ethernet interface.
+[2025-06-17 21:45:26.454] [DEBUG] **** Skipped items during network scan:  *****
+[2025-06-17 21:45:26.454] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:45:26.454] [DEBUG]   - Skipped link-local IPv6 address: fe80::2b74:1177:902a:85a9%14
+[2025-06-17 21:45:26.454] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:45:26.454] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2 (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:45:26.454] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped interface: Bluetooth Device (Personal Area Network) (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped interface: Software Loopback Interface 1 (Operational: True, Loopback: True, HasAddresses: True)
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped link-local IPv6 address: fe80::d5ff:606a:824:7e97%46
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped WSL interface IP address: 172.22.176.1 (Interface: vEthernet (WSL), Description: Hyper-V Virtual Ethernet Adapter)
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped link-local IPv6 address: fe80::686e:1f4b:9938:6776%53
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped WSL interface IP address: 172.21.240.1 (Interface: vEthernet (WSL (Hyper-V firewall)), Description: Hyper-V Virtual Ethernet Adapter #2)
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.455] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Virtual Filtering Platform VMSwitch Extension-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.456] [DEBUG]   - Skipped interface: WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: WAN Miniport (IP)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: Microsoft Kernel Debug Network Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: WAN Miniport (IP) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: WAN Miniport (IPv6) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller #2 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.457] [DEBUG]   - Skipped interface: WAN Miniport (PPPOE) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Virtual WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft Teredo Tunneling Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft IP-HTTPS Platform Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.458] [DEBUG]   - Skipped interface: Microsoft 6to4 Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.459] [DEBUG]   - Skipped interface: WAN Miniport (SSTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.459] [DEBUG]   - Skipped interface: WAN Miniport (IKEv2) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.459] [DEBUG]   - Skipped interface: WAN Miniport (L2TP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.459] [DEBUG]   - Skipped interface: WAN Miniport (PPTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:45:26.459] [DEBUG] **** End of Skipped items ****
+[2025-06-17 21:45:26.459] [DEBUG] Finished network IP address scan.
+[2025-06-17 21:45:26.483] [INFO] Internet connection is available
+[2025-06-17 21:45:36.880] [DEBUG] Ping 1: 9 ms to google.com
+Ping 2: 10 ms to google.com
+Ping 3: 9 ms to google.com
+Ping 4: 10 ms to google.com
+Ping 5: 10 ms to google.com
+Ping 6: 10 ms to google.com
+Ping 7: 10 ms to google.com
+Ping 8: 10 ms to google.com
+Ping 9: 9 ms to google.com
+Ping 10: 10 ms to google.com
+Average Ping: 9.70 ms to google.com
+Median Ping: 10.00 ms to google.com
+Jitter: 0.46 ms to google.com
+
+[2025-06-17 21:45:47.036] [DEBUG] Ping 1: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 2: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 3: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 4: 3 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 5: 3 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 6: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 7: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 8: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 9: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Ping 10: 2 ms to RCD2AES601.mi.corp.rockfin.com
+Average Ping: 2.20 ms to RCD2AES601.mi.corp.rockfin.com
+Median Ping: 2.00 ms to RCD2AES601.mi.corp.rockfin.com
+Jitter: 0.40 ms to RCD2AES601.mi.corp.rockfin.com
+
+[2025-06-17 21:46:36.419] [INFO] Logger initialized using log4net
+[2025-06-17 21:46:36.428] [DEBUG] Starting network IP address scan.
+[2025-06-17 21:46:37.210] [DEBUG] IP address 10.5.85.80 matches pattern. Location/Status: Campus/Amaze Wireless
+[2025-06-17 21:46:37.211] [DEBUG] WiFi SSID detected: AMAZE_Wireless
+Processing IPv4 address: 10.5.85.80 , Interface Wi-Fi , description: Intel(R) Wi-Fi 6 AX201 160MHz , type: This is a Wi-Fi interface.
+Added non-VPN IP 10.5.85.80 to all relevant IPs.
+
+[2025-06-17 21:46:37.212] [DEBUG] Processing IPv4 address: 172.22.176.1 , Interface vEthernet (WSL) , description: Hyper-V Virtual Ethernet Adapter , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.22.176.1
+
+[2025-06-17 21:46:37.212] [DEBUG] Processing IPv4 address: 172.21.240.1 , Interface vEthernet (WSL (Hyper-V firewall)) , description: Hyper-V Virtual Ethernet Adapter #2 , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.21.240.1
+
+[2025-06-17 21:46:37.214] [INFO] No VPN detected. Assuming Working from the Office.
+[2025-06-17 21:46:37.214] [DEBUG] IP address 10.5.85.80 matches pattern. Location/Status: Campus/Amaze Wireless
+[2025-06-17 21:46:37.215] [INFO] Summary Complete - Determined Primary IP: 10.5.85.80
+[2025-06-17 21:46:37.215] [INFO] Summary Complete - Determined Working From Home: False
+[2025-06-17 21:46:37.216] [INFO] Summary Complete - WiFi SSID: AMAZE_Wireless
+[2025-06-17 21:46:37.217] [INFO] Summary Complete - Final IP Map Size: 1
+[2025-06-17 21:46:37.220] [INFO] Summary Complete - Final IP Map: 10.5.85.80: This is a Wi-Fi interface.
+[2025-06-17 21:46:37.220] [DEBUG] **** Skipped items during network scan:  *****
+[2025-06-17 21:46:37.220] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:46:37.221] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:46:37.221] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2 (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:46:37.221] [DEBUG]   - Skipped link-local IPv6 address: fe80::3d24:f9e:6bf8:1f5c%6
+[2025-06-17 21:46:37.221] [DEBUG]   - Skipped interface: Bluetooth Device (Personal Area Network) (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:46:37.221] [DEBUG]   - Skipped interface: Software Loopback Interface 1 (Operational: True, Loopback: True, HasAddresses: True)
+[2025-06-17 21:46:37.222] [DEBUG]   - Skipped link-local IPv6 address: fe80::d5ff:606a:824:7e97%46
+[2025-06-17 21:46:37.222] [DEBUG]   - Skipped WSL interface IP address: 172.22.176.1 (Interface: vEthernet (WSL), Description: Hyper-V Virtual Ethernet Adapter)
+[2025-06-17 21:46:37.222] [DEBUG]   - Skipped link-local IPv6 address: fe80::686e:1f4b:9938:6776%53
+[2025-06-17 21:46:37.222] [DEBUG]   - Skipped WSL interface IP address: 172.21.240.1 (Interface: vEthernet (WSL (Hyper-V firewall)), Description: Hyper-V Virtual Ethernet Adapter #2)
+[2025-06-17 21:46:37.223] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.223] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.223] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.224] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.224] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.225] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.225] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.225] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.226] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Virtual Filtering Platform VMSwitch Extension-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.226] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.226] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.226] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.227] [DEBUG]   - Skipped interface: WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.227] [DEBUG]   - Skipped interface: WAN Miniport (IP)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.227] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.227] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.228] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.228] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.228] [DEBUG]   - Skipped interface: Microsoft Kernel Debug Network Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.228] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.229] [DEBUG]   - Skipped interface: WAN Miniport (IP) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.229] [DEBUG]   - Skipped interface: WAN Miniport (IPv6) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.229] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.229] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.229] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.230] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller #2 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.230] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.230] [DEBUG]   - Skipped interface: WAN Miniport (PPPOE) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.230] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.231] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Virtual WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.231] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Native WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.231] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.232] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.232] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.232] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.233] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.233] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.233] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.233] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.233] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.234] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.234] [DEBUG]   - Skipped interface: Microsoft Teredo Tunneling Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.234] [DEBUG]   - Skipped interface: Microsoft IP-HTTPS Platform Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.235] [DEBUG]   - Skipped interface: Microsoft 6to4 Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.235] [DEBUG]   - Skipped interface: WAN Miniport (SSTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.235] [DEBUG]   - Skipped interface: WAN Miniport (IKEv2) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.235] [DEBUG]   - Skipped interface: WAN Miniport (L2TP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.236] [DEBUG]   - Skipped interface: WAN Miniport (PPTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:46:37.236] [DEBUG] **** End of Skipped items ****
+[2025-06-17 21:46:37.236] [DEBUG] Finished network IP address scan.
+[2025-06-17 21:46:37.281] [INFO] Internet connection is available
+[2025-06-17 21:46:47.698] [DEBUG] Ping 1: 13 ms to google.com
+Ping 2: 11 ms to google.com
+Ping 3: 12 ms to google.com
+Ping 4: 13 ms to google.com
+Ping 5: 12 ms to google.com
+Ping 6: 11 ms to google.com
+Ping 7: 14 ms to google.com
+Ping 8: 20 ms to google.com
+Ping 9: 18 ms to google.com
+Ping 10: 13 ms to google.com
+Average Ping: 13.70 ms to google.com
+Median Ping: 13.00 ms to google.com
+Jitter: 2.83 ms to google.com
+
+[2025-06-17 21:52:36.767] [INFO] Logger initialized using log4net
+[2025-06-17 21:52:36.771] [DEBUG] Starting network IP address scan.
+[2025-06-17 21:52:36.973] [DEBUG] IP address 10.22.64.146 matches pattern. Location/Status: Big Office Network
+[2025-06-17 21:52:36.973] [DEBUG] Ethernet DNS suffix detected: mi.corp.rockfin.com
+Processing IPv4 address: 10.22.64.146 , Interface Ethernet 2 , description: Realtek USB GbE Family Controller , type: This is an Ethernet interface.
+Added non-VPN IP 10.22.64.146 to all relevant IPs.
+
+[2025-06-17 21:52:36.974] [DEBUG] Processing IPv4 address: 172.22.176.1 , Interface vEthernet (WSL) , description: Hyper-V Virtual Ethernet Adapter , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.22.176.1
+
+[2025-06-17 21:52:36.974] [DEBUG] Processing IPv4 address: 172.21.240.1 , Interface vEthernet (WSL (Hyper-V firewall)) , description: Hyper-V Virtual Ethernet Adapter #2 , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.21.240.1
+
+[2025-06-17 21:52:36.975] [INFO] No VPN detected. Assuming Working from the Office.
+[2025-06-17 21:52:36.975] [DEBUG] IP address 10.22.64.146 matches pattern. Location/Status: Big Office Network
+[2025-06-17 21:52:36.976] [INFO] Summary Complete - Determined Primary IP: 10.22.64.146
+[2025-06-17 21:52:36.976] [INFO] Summary Complete - Determined Working From Home: False
+[2025-06-17 21:52:36.976] [INFO] Summary Complete - WiFi SSID: 
+[2025-06-17 21:52:36.976] [INFO] Summary Complete - Ethernet DNS Suffix: mi.corp.rockfin.com
+[2025-06-17 21:52:36.977] [INFO] Summary Complete - Final IP Map Size: 1
+[2025-06-17 21:52:36.978] [INFO] Summary Complete - Final IP Map: 10.22.64.146: This is an Ethernet interface.
+[2025-06-17 21:52:36.978] [DEBUG] **** Skipped items during network scan:  *****
+[2025-06-17 21:52:36.978] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:52:36.978] [DEBUG]   - Skipped link-local IPv6 address: fe80::2b74:1177:902a:85a9%14
+[2025-06-17 21:52:36.978] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2 (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped interface: Bluetooth Device (Personal Area Network) (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped interface: Software Loopback Interface 1 (Operational: True, Loopback: True, HasAddresses: True)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped link-local IPv6 address: fe80::d5ff:606a:824:7e97%46
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped WSL interface IP address: 172.22.176.1 (Interface: vEthernet (WSL), Description: Hyper-V Virtual Ethernet Adapter)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped link-local IPv6 address: fe80::686e:1f4b:9938:6776%53
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped WSL interface IP address: 172.21.240.1 (Interface: vEthernet (WSL (Hyper-V firewall)), Description: Hyper-V Virtual Ethernet Adapter #2)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.979] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Virtual Filtering Platform VMSwitch Extension-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.980] [DEBUG]   - Skipped interface: WAN Miniport (IP)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: Microsoft Kernel Debug Network Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: WAN Miniport (IP) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: WAN Miniport (IPv6) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller #2 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: WAN Miniport (PPPOE) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.981] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Virtual WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft Teredo Tunneling Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft IP-HTTPS Platform Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: Microsoft 6to4 Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: WAN Miniport (SSTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: WAN Miniport (IKEv2) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.982] [DEBUG]   - Skipped interface: WAN Miniport (L2TP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.983] [DEBUG]   - Skipped interface: WAN Miniport (PPTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:52:36.983] [DEBUG] **** End of Skipped items ****
+[2025-06-17 21:52:36.983] [DEBUG] Finished network IP address scan.
+[2025-06-17 21:52:37.007] [INFO] Internet connection is available
+[2025-06-17 21:55:08.652] [INFO] Logger initialized using log4net
+[2025-06-17 21:55:08.660] [DEBUG] Starting network IP address scan.
+[2025-06-17 21:55:08.906] [DEBUG] Global Protect disabled registry value: 0
+[2025-06-17 21:55:08.907] [DEBUG] Global Protect Status: On
+[2025-06-17 21:55:08.907] [DEBUG] IP address 10.94.201.26 matches pattern. Location/Status: Working from Home (Troy)
+[2025-06-17 21:55:08.908] [DEBUG] Processing IPv4 address: 10.94.201.26 , Interface Ethernet 5 , description: PANGP Virtual Ethernet Adapter Secure , type: This is an Ethernet interface.
+Identified as a VPN IP address: 10.94.201.26
+VPN Status Check Result: True
+Set primary VPN IP found during scan to: 10.94.201.26
+
+[2025-06-17 21:55:08.917] [DEBUG] This is an IPv6 Address: 2600:1007:b029:4739:90df:5728:6ffb:d211
+Interface Wi-Fi, description: Intel(R) Wi-Fi 6 AX201 160MHz, type: This is a Wi-Fi interface.
+
+[2025-06-17 21:55:08.918] [DEBUG] This is an IPv6 Address: 2600:1007:b029:4739:5c04:4696:54a2:f0a2
+Interface Wi-Fi, description: Intel(R) Wi-Fi 6 AX201 160MHz, type: This is a Wi-Fi interface.
+
+[2025-06-17 21:55:09.357] [DEBUG] WiFi SSID detected: iPhone de Paulo
+Processing IPv4 address: 172.20.10.8 , Interface Wi-Fi , description: Intel(R) Wi-Fi 6 AX201 160MHz , type: This is a Wi-Fi interface.
+Added non-VPN IP 172.20.10.8 to all relevant IPs.
+
+[2025-06-17 21:55:09.358] [DEBUG] Processing IPv4 address: 172.22.176.1 , Interface vEthernet (WSL) , description: Hyper-V Virtual Ethernet Adapter , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.22.176.1
+
+[2025-06-17 21:55:09.358] [DEBUG] Processing IPv4 address: 172.21.240.1 , Interface vEthernet (WSL (Hyper-V firewall)) , description: Hyper-V Virtual Ethernet Adapter #2 , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.21.240.1
+
+[2025-06-17 21:55:09.360] [INFO] VPN IP address found during scan: 10.94.201.26 (This is an Ethernet interface.)
+[2025-06-17 21:55:09.360] [INFO] Working from Home (Troy)
+[2025-06-17 21:55:09.361] [INFO] Summary Complete - Determined Primary IP: 10.94.201.26
+[2025-06-17 21:55:09.362] [INFO] Summary Complete - Determined Working From Home: True
+[2025-06-17 21:55:09.362] [INFO] Summary Complete - WiFi SSID: iPhone de Paulo
+[2025-06-17 21:55:09.362] [INFO] Summary Complete - Ethernet DNS Suffix: 
+[2025-06-17 21:55:09.362] [INFO] Summary Complete - Final IP Map Size: 2
+[2025-06-17 21:55:09.365] [INFO] Summary Complete - Final IP Map: 10.94.201.26: This is an Ethernet interface., 172.20.10.8: This is a Wi-Fi interface.
+[2025-06-17 21:55:09.365] [DEBUG] **** Skipped items during network scan:  *****
+[2025-06-17 21:55:09.365] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:55:09.366] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:55:09.366] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2 (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:55:09.366] [DEBUG]   - Skipped link-local IPv6 address: fe80::3d24:f9e:6bf8:1f5c%6
+[2025-06-17 21:55:09.367] [DEBUG]   - Skipped interface: Bluetooth Device (Personal Area Network) (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 21:55:09.367] [DEBUG]   - Skipped interface: Software Loopback Interface 1 (Operational: True, Loopback: True, HasAddresses: True)
+[2025-06-17 21:55:09.367] [DEBUG]   - Skipped link-local IPv6 address: fe80::d5ff:606a:824:7e97%46
+[2025-06-17 21:55:09.367] [DEBUG]   - Skipped WSL interface IP address: 172.22.176.1 (Interface: vEthernet (WSL), Description: Hyper-V Virtual Ethernet Adapter)
+[2025-06-17 21:55:09.368] [DEBUG]   - Skipped link-local IPv6 address: fe80::686e:1f4b:9938:6776%53
+[2025-06-17 21:55:09.368] [DEBUG]   - Skipped WSL interface IP address: 172.21.240.1 (Interface: vEthernet (WSL (Hyper-V firewall)), Description: Hyper-V Virtual Ethernet Adapter #2)
+[2025-06-17 21:55:09.368] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.368] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.369] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.369] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.369] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.370] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.370] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.370] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.370] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.370] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.371] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.371] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Virtual Filtering Platform VMSwitch Extension-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.371] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.371] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.371] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.371] [DEBUG]   - Skipped interface: WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.372] [DEBUG]   - Skipped interface: WAN Miniport (IP)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.372] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.372] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.372] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.373] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.373] [DEBUG]   - Skipped interface: Microsoft Kernel Debug Network Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.373] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.373] [DEBUG]   - Skipped interface: WAN Miniport (IP) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.373] [DEBUG]   - Skipped interface: WAN Miniport (IPv6) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.374] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.374] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.374] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller #2 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.374] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.374] [DEBUG]   - Skipped interface: WAN Miniport (PPPOE) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.375] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.375] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Virtual WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.375] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Native WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.376] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.376] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.376] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.376] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.376] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.376] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.377] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.377] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.377] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.378] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.378] [DEBUG]   - Skipped interface: Microsoft Teredo Tunneling Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.378] [DEBUG]   - Skipped interface: Microsoft IP-HTTPS Platform Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.378] [DEBUG]   - Skipped interface: Microsoft 6to4 Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.379] [DEBUG]   - Skipped interface: WAN Miniport (SSTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.379] [DEBUG]   - Skipped interface: WAN Miniport (IKEv2) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.380] [DEBUG]   - Skipped interface: WAN Miniport (L2TP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.380] [DEBUG]   - Skipped interface: WAN Miniport (PPTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 21:55:09.380] [DEBUG] **** End of Skipped items ****
+[2025-06-17 21:55:09.381] [DEBUG] Finished network IP address scan.
+[2025-06-17 21:55:09.476] [INFO] Internet connection is available
+[2025-06-17 21:55:20.534] [DEBUG] Ping 1: 45 ms to google.com
+Ping 2: 61 ms to google.com
+Ping 3: 45 ms to google.com
+Ping 4: 78 ms to google.com
+Ping 5: 62 ms to google.com
+Ping 6: 85 ms to google.com
+Ping 7: 47 ms to google.com
+Ping 8: 62 ms to google.com
+Ping 9: 44 ms to google.com
+Ping 10: 46 ms to google.com
+Average Ping: 57.50 ms to google.com
+Median Ping: 54.00 ms to google.com
+Jitter: 14.02 ms to google.com
+
+[2025-06-17 22:54:28.247] [INFO] Logger initialized using log4net
+[2025-06-17 22:54:28.250] [DEBUG] Starting network IP address scan.
+[2025-06-17 22:54:28.431] [DEBUG] Global Protect disabled registry value: 0
+[2025-06-17 22:54:28.431] [DEBUG] Global Protect Status: On
+[2025-06-17 22:54:28.431] [DEBUG] IP address 10.93.244.209 matches pattern. Location/Status: Working from Home (Detroit)
+[2025-06-17 22:54:28.432] [DEBUG] Processing IPv4 address: 10.93.244.209 , Interface Ethernet 5 , description: PANGP Virtual Ethernet Adapter Secure , type: This is an Ethernet interface.
+Identified as a VPN IP address: 10.93.244.209
+VPN Status Check Result: True
+Set primary VPN IP found during scan to: 10.93.244.209
+
+[2025-06-17 22:54:28.713] [DEBUG] WiFi SSID detected: MarriottBonvoy
+Processing IPv4 address: 172.20.3.107 , Interface Wi-Fi , description: Intel(R) Wi-Fi 6 AX201 160MHz , type: This is a Wi-Fi interface.
+Added non-VPN IP 172.20.3.107 to all relevant IPs.
+
+[2025-06-17 22:54:28.713] [DEBUG] Processing IPv4 address: 172.22.176.1 , Interface vEthernet (WSL) , description: Hyper-V Virtual Ethernet Adapter , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.22.176.1
+
+[2025-06-17 22:54:28.713] [DEBUG] Processing IPv4 address: 172.21.240.1 , Interface vEthernet (WSL (Hyper-V firewall)) , description: Hyper-V Virtual Ethernet Adapter #2 , type: This is an Ethernet interface.
+Skipped WSL interface IP address: 172.21.240.1
+
+[2025-06-17 22:54:28.714] [INFO] VPN IP address found during scan: 10.93.244.209 (This is an Ethernet interface.)
+[2025-06-17 22:54:28.714] [INFO] Working from Home (Detroit)
+[2025-06-17 22:54:28.715] [INFO] Summary Complete - Determined Primary IP: 10.93.244.209
+[2025-06-17 22:54:28.715] [INFO] Summary Complete - Determined Working From Home: True
+[2025-06-17 22:54:28.715] [INFO] Summary Complete - WiFi SSID: MarriottBonvoy
+[2025-06-17 22:54:28.715] [INFO] Summary Complete - Ethernet DNS Suffix: 
+[2025-06-17 22:54:28.715] [INFO] Summary Complete - Final IP Map Size: 2
+[2025-06-17 22:54:28.717] [INFO] Summary Complete - Final IP Map: 10.93.244.209: This is an Ethernet interface., 172.20.3.107: This is a Wi-Fi interface.
+[2025-06-17 22:54:28.717] [DEBUG] **** Skipped items during network scan:  *****
+[2025-06-17 22:54:28.717] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 22:54:28.717] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 22:54:28.717] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2 (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 22:54:28.717] [DEBUG]   - Skipped link-local IPv6 address: fe80::3d24:f9e:6bf8:1f5c%6
+[2025-06-17 22:54:28.717] [DEBUG]   - Skipped interface: Bluetooth Device (Personal Area Network) (Operational: False, Loopback: False, HasAddresses: True)
+[2025-06-17 22:54:28.717] [DEBUG]   - Skipped interface: Software Loopback Interface 1 (Operational: True, Loopback: True, HasAddresses: True)
+[2025-06-17 22:54:28.717] [DEBUG]   - Skipped link-local IPv6 address: fe80::d5ff:606a:824:7e97%46
+[2025-06-17 22:54:28.717] [DEBUG]   - Skipped WSL interface IP address: 172.22.176.1 (Interface: vEthernet (WSL), Description: Hyper-V Virtual Ethernet Adapter)
+[2025-06-17 22:54:28.718] [DEBUG]   - Skipped link-local IPv6 address: fe80::686e:1f4b:9938:6776%53
+[2025-06-17 22:54:28.718] [DEBUG]   - Skipped WSL interface IP address: 172.21.240.1 (Interface: vEthernet (WSL (Hyper-V firewall)), Description: Hyper-V Virtual Ethernet Adapter #2)
+[2025-06-17 22:54:28.718] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.718] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.718] [DEBUG]   - Skipped interface: PANGP Virtual Ethernet Adapter Secure-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.718] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Intel(R) Ethernet Connection (14) I219-LM-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Hyper-V Virtual Switch Extension Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2-Virtual Filtering Platform VMSwitch Extension-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: Hyper-V Virtual Ethernet Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.719] [DEBUG]   - Skipped interface: WAN Miniport (IP)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.720] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.720] [DEBUG]   - Skipped interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.720] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.720] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.720] [DEBUG]   - Skipped interface: Microsoft Kernel Debug Network Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.720] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.720] [DEBUG]   - Skipped interface: WAN Miniport (IP) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.720] [DEBUG]   - Skipped interface: WAN Miniport (IPv6) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.720] [DEBUG]   - Skipped interface: WAN Miniport (Network Monitor) (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Realtek USB GbE Family Controller #2 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Hyper-V Virtual Switch Extension Adapter #2 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: WAN Miniport (PPPOE) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP Native MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Virtual WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-Native WiFi Filter Driver-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-QoS Packet Scheduler-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Intel(R) Wi-Fi 6 AX201 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: True, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.721] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG]   - Skipped interface: Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000 (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG]   - Skipped interface: Microsoft Teredo Tunneling Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG]   - Skipped interface: Microsoft IP-HTTPS Platform Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG]   - Skipped interface: Microsoft 6to4 Adapter (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG]   - Skipped interface: WAN Miniport (SSTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG]   - Skipped interface: WAN Miniport (IKEv2) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG]   - Skipped interface: WAN Miniport (L2TP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG]   - Skipped interface: WAN Miniport (PPTP) (Operational: False, Loopback: False, HasAddresses: False)
+[2025-06-17 22:54:28.722] [DEBUG] **** End of Skipped items ****
+[2025-06-17 22:54:28.722] [DEBUG] Finished network IP address scan.
+[2025-06-17 22:54:28.765] [INFO] Internet connection is available
+[2025-06-17 22:54:39.358] [DEBUG] Ping 1: 20 ms to google.com
+Ping 2: 23 ms to google.com
+Ping 3: 25 ms to google.com
+Ping 4: 21 ms to google.com
+Ping 5: 24 ms to google.com
+Ping 6: 20 ms to google.com
+Ping 7: 20 ms to google.com
+Ping 8: 21 ms to google.com
+Ping 9: 20 ms to google.com
+Ping 10: 22 ms to google.com
+Average Ping: 21.60 ms to google.com
+Median Ping: 21.00 ms to google.com
+Jitter: 1.74 ms to google.com
+

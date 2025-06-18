@@ -103,6 +103,27 @@ async Task RunMainLoop()
         Console.WriteLine(result.VpnDetectedDuringScan);
         Console.ResetColor();
 
+
+        // Display WiFi SSID if available
+        if (!string.IsNullOrWhiteSpace(result.WiFiSSID))
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("📶 WiFi SSID: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(result.WiFiSSID);
+            Console.ResetColor();
+        }
+
+        // Display Ethernet DNS suffix if available (only when connected via Ethernet)
+        if (!string.IsNullOrWhiteSpace(result.EthernetDnsSuffix))
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("🔌 Ethernet DNS Suffix: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(result.EthernetDnsSuffix);
+            Console.ResetColor();
+        }
+
         if (result.VpnDetectedDuringScan)
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -208,7 +229,7 @@ async Task RunMainLoop()
         
         // Ask user if they want to run a speed test
         Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.Write("\n🚀 Would you like to run a bandwidth speed test? (y/n): ");
+        Console.Write("\n🚀 Would you like to run a bandwidth external speed test? (y/n): ");
         Console.ForegroundColor = ConsoleColor.White;
         var userInput = Console.ReadLine()?.Trim().ToLower();
         Console.ResetColor();
@@ -216,12 +237,12 @@ async Task RunMainLoop()
         if (userInput == "y" || userInput == "yes")
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("\n📊 Starting bandwidth speed test...");
+            Console.WriteLine("\n📊 Starting bandwidth external speed test...");
             Console.ResetColor();
             
             try
             {
-                await NetworkCheck.SpeedTest.RunSpeedTest();
+                await NetworkCheck.ExternalSpeedTest.RunSpeedTest();
                 
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("\n✅ Speed test completed successfully!");
