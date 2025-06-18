@@ -1,0 +1,3 @@
+Timestamp,Host,Jitter(ms),Success,NetworkCategory
+2025-06-18 11:24:50,google.com,19.11,True,office_amaze_wireless
+2025-06-18 11:33:13,google.com,22.20,True,office_amaze_wireless

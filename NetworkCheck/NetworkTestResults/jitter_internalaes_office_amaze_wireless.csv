@@ -1,0 +1,5 @@
+Timestamp,Host,Jitter(ms),Success,NetworkCategory
+2025-06-18 11:25:00,RCD2AES601.mi.corp.rockfin.com,0.98,True,office_amaze_wireless
+2025-06-18 11:25:10,RCD1AES601.mi.corp.rockfin.com,0.80,True,office_amaze_wireless
+2025-06-18 11:33:23,RCD2AES601.mi.corp.rockfin.com,0.83,True,office_amaze_wireless
+2025-06-18 11:33:33,RCD1AES601.mi.corp.rockfin.com,6.15,True,office_amaze_wireless

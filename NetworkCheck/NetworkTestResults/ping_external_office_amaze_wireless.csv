@@ -1,0 +1,3 @@
+Timestamp,Host,MedianPing(ms),Success,NetworkCategory
+2025-06-18 11:24:50,google.com,10.50,True,office_amaze_wireless
+2025-06-18 11:33:13,google.com,11.00,True,office_amaze_wireless

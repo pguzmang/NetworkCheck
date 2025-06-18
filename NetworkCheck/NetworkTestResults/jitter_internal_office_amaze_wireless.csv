@@ -1,0 +1,3 @@
+Timestamp,Host,Jitter(ms),Success,NetworkCategory
+2025-06-18 11:25:20,git.rockfin.com,3.68,True,office_amaze_wireless
+2025-06-18 11:33:43,git.rockfin.com,0.63,True,office_amaze_wireless
