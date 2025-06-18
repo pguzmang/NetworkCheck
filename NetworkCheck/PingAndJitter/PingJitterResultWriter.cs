@@ -320,9 +320,14 @@ namespace NetworkScanner
             }
             else
             {
-                // Show alert
-                var alertColor = alertLevel == AlertLevel.Warning ? ConsoleColor.Yellow : ConsoleColor.Red;
-                var alertSymbol = alertLevel == AlertLevel.Warning ? "🟡 WARNING" : "🔴 CRITICAL";
+                // Show alert based on level
+                var (alertColor, alertSymbol) = alertLevel switch
+                {
+                    AlertLevel.Moderate => (ConsoleColor.DarkYellow, "🟠 MODERATE"),
+                    AlertLevel.Warning => (ConsoleColor.Yellow, "🟡 WARNING"),
+                    AlertLevel.Critical => (ConsoleColor.Red, "🔴 CRITICAL"),
+                    _ => (ConsoleColor.Gray, "ℹ️ INFO")
+                };
                 
                 Console.ForegroundColor = alertColor;
                 Console.Write($"{alertSymbol}: ");
@@ -353,9 +358,14 @@ namespace NetworkScanner
             }
             else
             {
-                // Show alert
-                var alertColor = alertLevel == AlertLevel.Warning ? ConsoleColor.Yellow : ConsoleColor.Red;
-                var alertSymbol = alertLevel == AlertLevel.Warning ? "🟡 WARNING" : "🔴 CRITICAL";
+                // Show alert based on level
+                var (alertColor, alertSymbol) = alertLevel switch
+                {
+                    AlertLevel.Moderate => (ConsoleColor.DarkYellow, "🟠 MODERATE"),
+                    AlertLevel.Warning => (ConsoleColor.Yellow, "🟡 WARNING"),
+                    AlertLevel.Critical => (ConsoleColor.Red, "🔴 CRITICAL"),
+                    _ => (ConsoleColor.Gray, "ℹ️ INFO")
+                };
                 
                 Console.ForegroundColor = alertColor;
                 Console.Write($"{alertSymbol}: ");
@@ -377,35 +387,42 @@ namespace NetworkScanner
             bool isExternal = IsExternal(host);
             bool isAes = IsInternalAes(host);
             
-            double warningMultiplier, criticalMultiplier;
-            double warningAbsolute, criticalAbsolute;
+            double moderateMultiplier, warningMultiplier, criticalMultiplier;
+            double moderateAbsolute, warningAbsolute, criticalAbsolute;
             
             if (isAes)
             {
                 // AES servers - strictest thresholds
+                moderateMultiplier = 1.1;
                 warningMultiplier = 1.2;
                 criticalMultiplier = 1.5;
+                moderateAbsolute = median + 1;
                 warningAbsolute = median + 2;
                 criticalAbsolute = median + 5;
             }
             else if (isExternal)
             {
                 // External servers - more lenient due to internet variability
+                moderateMultiplier = 1.3;
                 warningMultiplier = 1.5;
                 criticalMultiplier = 2.5;
+                moderateAbsolute = median + 10;
                 warningAbsolute = median + 15;
                 criticalAbsolute = median + 30;
             }
             else
             {
                 // Internal servers - moderate thresholds
+                moderateMultiplier = 1.2;
                 warningMultiplier = 1.3;
                 criticalMultiplier = 2.0;
+                moderateAbsolute = median + 3;
                 warningAbsolute = median + 5;
                 criticalAbsolute = median + 10;
             }
             
             // Check thresholds (use whichever is higher)
+            double moderateThreshold = Math.Max(median * moderateMultiplier, moderateAbsolute);
             double warningThreshold = Math.Max(median * warningMultiplier, warningAbsolute);
             double criticalThreshold = Math.Max(median * criticalMultiplier, criticalAbsolute);
             
@@ -419,6 +436,11 @@ namespace NetworkScanner
                 double multiplier = currentPing / median;
                 return (AlertLevel.Warning, $"{multiplier:F1}x median, performance degraded");
             }
+            else if (currentPing >= moderateThreshold)
+            {
+                double multiplier = currentPing / median;
+                return (AlertLevel.Moderate, $"{multiplier:F1}x median, slight performance impact");
+            }
             
             return (AlertLevel.None, "");
         }
@@ -426,12 +448,15 @@ namespace NetworkScanner
         private (AlertLevel level, string message) GetJitterAlertLevel(double currentJitter, double median, string category, string host)
         {
             // Jitter thresholds - generally more lenient as it's naturally more variable
+            double moderateMultiplier = 1.5;
             double warningMultiplier = 2.0;
             double criticalMultiplier = 3.0;
+            double moderateAbsolute = median + 3;
             double warningAbsolute = median + 5;
             double criticalAbsolute = median + 10;
             
             // Check thresholds (use whichever is higher)
+            double moderateThreshold = Math.Max(median * moderateMultiplier, moderateAbsolute);
             double warningThreshold = Math.Max(median * warningMultiplier, warningAbsolute);
             double criticalThreshold = Math.Max(median * criticalMultiplier, criticalAbsolute);
             
@@ -445,6 +470,11 @@ namespace NetworkScanner
                 double multiplier = currentJitter / median;
                 return (AlertLevel.Warning, $"{multiplier:F1}x median, increased network variability");
             }
+            else if (currentJitter >= moderateThreshold)
+            {
+                double multiplier = currentJitter / median;
+                return (AlertLevel.Moderate, $"{multiplier:F1}x median, minor network variation");
+            }
             
             return (AlertLevel.None, "");
         }
@@ -452,6 +482,7 @@ namespace NetworkScanner
         private enum AlertLevel
         {
             None,
+            Moderate,
             Warning,
             Critical
         }

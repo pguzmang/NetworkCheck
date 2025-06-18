@@ -11,3 +11,16 @@ NetworkPingAndJitterTest:
     PingCount: 10
     TimeoutMilliseconds: 5000
     DelayBetweenPingsMilliseconds: 1000
+    
+    # Smart adaptive ping counts for enterprise networks (15,000+ computers)
+    AdaptivePingCounts:
+      Enabled: true
+      ExternalServerPings: 7    # Internet variability needs more samples
+      InternalServerPings: 3    # Stable corporate network - minimal load
+      AesServerPings: 3         # Critical servers - protect from overload
+    
+    # Random delay to stagger network load across enterprise
+    RandomDelay:
+      Enabled: true
+      MinDelaySeconds: 0        # Minimum delay
+      MaxDelaySeconds: 180      # Maximum delay (3 minutes)

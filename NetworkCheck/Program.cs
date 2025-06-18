@@ -44,9 +44,9 @@ Console.WriteLine($"   📄 Median Ping: {Path.GetFileName(medianPingFile)}");
 Console.WriteLine($"   📄 Jitter Data: {Path.GetFileName(jitterFile)}");
 Console.ResetColor();
 
-await RunMainLoop();
+RunMainLoop();
 
-async Task RunMainLoop()
+void RunMainLoop()
 {
     try
     {
@@ -221,7 +221,11 @@ async Task RunMainLoop()
         Console.WriteLine($"{failCount} Failed");
         Console.ResetColor();
         
-        // Save results to files
+        // Save results to categorized files with confidence level system
+        var categorizedPingWriter = new CategorizedPingJitterResultWriter(result);
+        categorizedPingWriter.WriteResults(pingResults);
+        
+        // Also save to simple results files for backward compatibility
         SavePingResults(pingResults, medianPingFile, jitterFile);
         
         Console.ForegroundColor = ConsoleColor.Green;
@@ -231,41 +235,6 @@ async Task RunMainLoop()
         Console.WriteLine($"  - {jitterFile}");
         Console.ResetColor();
         
-        // Ask user if they want to run a speed test
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.Write("\n🚀 Would you like to run a bandwidth external speed test? (y/n): ");
-        Console.ForegroundColor = ConsoleColor.White;
-        var userInput = Console.ReadLine()?.Trim().ToLower();
-        Console.ResetColor();
-        
-        if (userInput == "y" || userInput == "yes")
-        {
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("\n📊 Starting bandwidth external speed test...");
-            Console.ResetColor();
-            
-            try
-            {
-                await NetworkCheck.ExternalSpeedTest.RunSpeedTest();
-                
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\n✅ Speed test completed successfully!");
-                Console.ResetColor();
-            }
-            catch (Exception ex)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"\n❌ Speed test failed: {ex.Message}");
-                Console.ResetColor();
-                FileLogger.Error($"Speed test error: {ex}");
-            }
-        }
-        else
-        {
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("Skipping speed test...");
-            Console.ResetColor();
-        }
         
         testStartTime.Stop();
         var elapsedSeconds = testStartTime.Elapsed.TotalSeconds;

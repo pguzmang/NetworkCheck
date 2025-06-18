@@ -12,6 +12,13 @@ using System.IO;
 
 namespace NetworkScanner
 {
+    public enum ServerType
+    {
+        External,
+        Internal,
+        AesServer
+    }
+    
     public class NetworkPingAndJitterTest
     {
         private static NetworkCheck.NetworkPingSettings _settings = null!;
@@ -38,7 +45,40 @@ namespace NetworkScanner
             Console.WriteLine($"   • External servers: {_settings.Servers.External?.Count ?? 0}");
             Console.WriteLine($"   • Internal servers: {_settings.Servers.Internal?.Count ?? 0}");
             Console.WriteLine($"   • AES servers: {_settings.Servers.AesServers?.Count ?? 0}");
-            Console.WriteLine($"   • Ping count: {_settings.PingSettings.PingCount}");
+            
+            // Show adaptive ping settings
+            if (_settings.PingSettings.AdaptivePingCounts.Enabled)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("   • Adaptive ping counts: ENABLED");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine($"     - External: {_settings.PingSettings.AdaptivePingCounts.ExternalServerPings} pings");
+                Console.WriteLine($"     - Internal: {_settings.PingSettings.AdaptivePingCounts.InternalServerPings} pings");
+                Console.WriteLine($"     - AES: {_settings.PingSettings.AdaptivePingCounts.AesServerPings} pings");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("   • Adaptive ping counts: DISABLED");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine($"     - Using default: {_settings.PingSettings.PingCount} pings");
+            }
+            
+            // Show random delay settings
+            if (_settings.PingSettings.RandomDelay.Enabled)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("   • Enterprise load balancing: ENABLED");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine($"     - Random delay: {_settings.PingSettings.RandomDelay.MinDelaySeconds}-{_settings.PingSettings.RandomDelay.MaxDelaySeconds} seconds");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("   • Enterprise load balancing: DISABLED");
+            }
+            
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine($"   • Timeout: {_settings.PingSettings.TimeoutMilliseconds}ms");
             Console.ResetColor();
         }
@@ -52,6 +92,9 @@ namespace NetworkScanner
         {
             var results = new List<PingResult>();
             
+            // Apply random delay to stagger network load across enterprise
+            ApplyRandomDelay();
+            
             // External tests
             if (_settings.Servers.External?.Count > 0)
             {
@@ -63,7 +106,7 @@ namespace NetworkScanner
                 
                 foreach (var server in _settings.Servers.External)
                 {
-                    results.Add(TestPingAndJitter(server));
+                    results.Add(TestPingAndJitter(server, ServerType.External));
                 }
             }
             
@@ -78,7 +121,7 @@ namespace NetworkScanner
                 
                 foreach (var server in _settings.Servers.AesServers)
                 {
-                    results.Add(TestPingAndJitter(server));
+                    results.Add(TestPingAndJitter(server, ServerType.AesServer));
                 }
             }
             
@@ -93,7 +136,7 @@ namespace NetworkScanner
                 
                 foreach (var server in _settings.Servers.Internal)
                 {
-                    results.Add(TestPingAndJitter(server));
+                    results.Add(TestPingAndJitter(server, ServerType.Internal));
                 }
             }
             
@@ -117,7 +160,7 @@ namespace NetworkScanner
         {
             foreach (var server in _settings.Servers.External)
             {
-                TestPingAndJitter(server);
+                TestPingAndJitter(server, ServerType.External);
             }
         }
 
@@ -125,7 +168,7 @@ namespace NetworkScanner
         {
             foreach (var server in _settings.Servers.AesServers)
             {
-                TestPingAndJitter(server);
+                TestPingAndJitter(server, ServerType.AesServer);
             }
         }
 
@@ -133,22 +176,42 @@ namespace NetworkScanner
         {
             foreach (var server in _settings.Servers.Internal)
             {
-                TestPingAndJitter(server);
+                TestPingAndJitter(server, ServerType.Internal);
             }
         }
 
         public static PingResult TestPingAndJitter(string host)
         {
+            return TestPingAndJitter(host, ServerType.Internal); // Default fallback
+        }
+        
+        public static PingResult TestPingAndJitter(string host, ServerType serverType)
+        {
+            // Determine ping count based on server type and adaptive settings
+            int pingCount = GetAdaptivePingCount(serverType);
+            
             // Display test header with colors
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Write($"\n📊 Testing: ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(host);
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine($" (sending {_settings.PingSettings.PingCount} pings)");
-            Console.ResetColor();
+            Console.Write($" (sending {pingCount} pings");
             
-            int pingCount = _settings.PingSettings.PingCount; // Number of pings to send
+            // Show adaptive ping info if enabled
+            if (_settings.PingSettings.AdaptivePingCounts.Enabled)
+            {
+                string serverTypeName = serverType switch
+                {
+                    ServerType.External => "External",
+                    ServerType.AesServer => "AES",
+                    ServerType.Internal => "Internal",
+                    _ => "Unknown"
+                };
+                Console.Write($" - {serverTypeName} adaptive");
+            }
+            Console.WriteLine(")");
+            Console.ResetColor();
             List<long> pingTimes = new List<long>();
             long pingTime;
             StringBuilder logMessages = new StringBuilder();
@@ -358,6 +421,75 @@ namespace NetworkScanner
             public static void Run()
             {
                 CheckAllNetworks();
+            }
+        }
+        
+        /// <summary>
+        /// Gets the adaptive ping count based on server type to minimize enterprise network impact
+        /// </summary>
+        /// <param name="serverType">Type of server being tested</param>
+        /// <returns>Number of pings to send</returns>
+        private static int GetAdaptivePingCount(ServerType serverType)
+        {
+            if (!_settings.PingSettings.AdaptivePingCounts.Enabled)
+            {
+                return _settings.PingSettings.PingCount; // Fall back to default
+            }
+            
+            return serverType switch
+            {
+                ServerType.External => _settings.PingSettings.AdaptivePingCounts.ExternalServerPings,
+                ServerType.AesServer => _settings.PingSettings.AdaptivePingCounts.AesServerPings,
+                ServerType.Internal => _settings.PingSettings.AdaptivePingCounts.InternalServerPings,
+                _ => _settings.PingSettings.PingCount
+            };
+        }
+        
+        /// <summary>
+        /// Applies random delay to stagger network load across multiple computers in enterprise environment
+        /// </summary>
+        private static void ApplyRandomDelay()
+        {
+            if (!_settings.PingSettings.RandomDelay.Enabled)
+            {
+                return;
+            }
+            
+            var random = new Random();
+            int delaySeconds = random.Next(
+                _settings.PingSettings.RandomDelay.MinDelaySeconds,
+                _settings.PingSettings.RandomDelay.MaxDelaySeconds + 1
+            );
+            
+            if (delaySeconds > 0)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine($"🕒 Enterprise load balancing: waiting {delaySeconds} seconds to stagger network tests...");
+                Console.ResetColor();
+                
+                // Display countdown for longer delays
+                if (delaySeconds > 30)
+                {
+                    int remainingSeconds = delaySeconds;
+                    while (remainingSeconds > 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.Write($"\r   ⏳ Starting tests in {remainingSeconds} seconds...  ");
+                        Console.ResetColor();
+                        
+                        Thread.Sleep(1000);
+                        remainingSeconds--;
+                    }
+                    Console.WriteLine("\r" + new string(' ', 50)); // Clear countdown line
+                }
+                else
+                {
+                    Thread.Sleep(delaySeconds * 1000);
+                }
+                
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("✅ Load balancing delay complete, starting network tests");
+                Console.ResetColor();
             }
         }
     }
