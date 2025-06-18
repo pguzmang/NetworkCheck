@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "NetworkCheck\\IpAddressResultWriter.cs",
               "ToolTip": "C:\\Github\\NetworkCheck\\NetworkCheck\\IpAddressResultWriter.cs",
               "RelativeToolTip": "NetworkCheck\\IpAddressResultWriter.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAiwA8AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwA0AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T13:36:03.099Z",
               "EditorCaption": ""
@@ -115,8 +115,7 @@
               "RelativeToolTip": "NetworkCheck\\Program.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAmwD8AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T05:32:28.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T05:32:28.261Z"
             },
             {
               "$type": "Document",
@@ -128,8 +127,7 @@
               "RelativeToolTip": "NetworkCheck\\FileLogger.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA0wBIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T05:27:24.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T05:27:24.881Z"
             },
             {
               "$type": "Document",
